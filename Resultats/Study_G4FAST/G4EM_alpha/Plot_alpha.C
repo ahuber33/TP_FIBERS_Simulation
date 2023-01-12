@@ -1,0 +1,136 @@
+#include "/mnt/hgfs/Partage/Simulations/TP_Simulation/Resultats/Plot.hh"
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+void Plot_alpha()
+{
+  float c=0;
+  float d=0;
+  
+  ifstream file_Sc("Scintillateur_alpha.txt");
+  float density_Sc = 1.032;
+  std::vector<float> vEnergy_Sc;
+  std::vector<float> vCSDA_Sc;
+  vEnergy_Sc.clear();
+  vCSDA_Sc.clear();
+  for (int i =0; i<121; i++){
+    file_Sc >> c >> d;
+    vEnergy_Sc.push_back(c);
+    vCSDA_Sc.push_back(d/density_Sc);
+  }
+  file_Sc.close();
+
+
+  ifstream file_Cu("Cuivre_alpha.txt");
+  float density_Cu = 8.96;
+  std::vector<float> vEnergy_Cu;
+  std::vector<float> vCSDA_Cu;
+  vEnergy_Cu.clear();
+  vCSDA_Cu.clear();
+  for (int i =0; i<121; i++){
+    file_Cu >> c >> d;
+    vEnergy_Cu.push_back(c);
+    vCSDA_Cu.push_back(d/density_Cu);
+  }
+  file_Cu.close();
+
+
+  
+  TGraph *gCSDA_Sc = new TGraph(vEnergy_Sc.size(), &vEnergy_Sc[0], &vCSDA_Sc[0]);
+  TGraph *gCSDA_Cu = new TGraph(vEnergy_Cu.size(), &vEnergy_Cu[0], &vCSDA_Cu[0]);
+  //TGraph *gCSDA_C = new TGraph(vEnergy_C.size(), &vEnergy_C[0], &vCSDA_C[0]);
+
+  TCanvas* c1 = new TCanvas;
+  c1->SetLogy();
+  c1->SetLogx();
+  gCSDA_Sc->SetLineColor(kCyan);
+  gCSDA_Sc->SetMarkerColor(kCyan);
+  gCSDA_Cu->SetLineColor(kOrange);
+  //gCSDA_C->SetLineColor(kBlack);
+  gCSDA_Sc->Draw("");
+  //gCSDA_Alu->Draw("same");
+  //gCSDA_Cu->Draw("same");
+  //gCSDA_C->Draw("same");
+
+
+  const int nfiles=14;
+  const char* filenames_Sc[8]=
+    {
+     "data/Scintillateur_alpha_100keV.root",
+     "data/Scintillateur_alpha_500keV.root",
+     "data/Scintillateur_alpha_1000keV.root",
+     "data/Scintillateur_alpha_2000keV.root",
+     "data/Scintillateur_alpha_3000keV.root",
+     "data/Scintillateur_alpha_4000keV.root",
+     "data/Scintillateur_alpha_5000keV.root",
+     "data/Scintillateur_alpha_10000keV.root",
+    };
+
+
+    const char* filenames_Sc_Gas[8]=
+    {
+     "data/Scintillateur_alpha_GasModel_100keV.root",
+     "data/Scintillateur_alpha_GasModel_500keV.root",
+     "data/Scintillateur_alpha_GasModel_1000keV.root",
+     "data/Scintillateur_alpha_GasModel_2000keV.root",
+     "data/Scintillateur_alpha_GasModel_3000keV.root",
+     "data/Scintillateur_alpha_GasModel_4000keV.root",
+     "data/Scintillateur_alpha_GasModel_5000keV.root",
+     "data/Scintillateur_alpha_GasModel_10000keV.root",
+    };
+
+   const char* filenames_ZnS[14]=
+   {
+    "data/ZnS_alpha_10keV.root",
+    "data/ZnS_alpha_100keV.root",
+    "data/ZnS_alpha_250keV.root",
+    "data/ZnS_alpha_500keV.root",
+    "data/ZnS_alpha_750keV.root",
+    "data/ZnS_alpha_1000keV.root",
+    "data/ZnS_alpha_1500keV.root",
+    "data/ZnS_alpha_2000keV.root",
+    "data/ZnS_alpha_3000keV.root",
+    "data/ZnS_alpha_4000keV.root",
+    "data/ZnS_alpha_5000keV.root",
+    "data/ZnS_alpha_10000keV.root",
+    "data/ZnS_alpha_50000keV.root",
+    "data/ZnS_alpha_100000keV.root"
+   };
+
+   TGraphErrors* f_Sc = ge(filenames_Sc, "Tree_electron", "E_start", "TotalLength", 8);
+   TGraphErrors* f_Sc_Gas = ge(filenames_Sc_Gas, "Tree_electron", "E_start", "TotalLength", 8);
+
+  TGraphErrors* f_ZnS = ge(filenames_ZnS, "Tree_electron", "E_start", "TotalLength", 14);
+    
+
+  f_Sc->Draw("PE3Same");
+  f_Sc->SetMarkerStyle(8);
+  f_Sc->SetMarkerSize(0.8);
+  f_Sc->SetMarkerColor(kCyan);
+  f_Sc->SetFillColor(kCyan);
+  f_Sc->SetFillStyle(3002);
+
+  //f_Sc_Gas->Draw("PE3Same");
+  f_Sc_Gas->SetMarkerStyle(8);
+  f_Sc_Gas->SetMarkerSize(0.5);
+  f_Sc_Gas->SetMarkerColor(kBlue);
+  f_Sc_Gas->SetFillColor(kBlue);
+  f_Sc_Gas->SetFillStyle(3002);
+
+  // f_ZnS->Draw("PE3Same");
+  // f_ZnS->SetMarkerStyle(8);
+  // f_ZnS->SetMarkerColor(kBlack);
+  // f_ZnS->SetFillColor(kBlack);
+  // f_ZnS->SetFillStyle(3005);
+
+
+   auto legend = new TLegend(0.1,0.7,0.48,0.9);
+   legend->AddEntry(gCSDA_Sc,"Data from astar","l");
+   legend->AddEntry(f_Sc,"Simulation","p");
+   //legend->AddEntry(f_Sc_Gas,"Sim with IonGasModel","p");
+   legend->Draw();
+  
+  
+}

@@ -1,0 +1,2446 @@
+*********************************************************************************************************
+* G4Track Information:   Particle = opticalphoton,   Track ID = 97,   Parent ID = 1
+*********************************************************************************************************
+
+Step#    X(mm)    Y(mm)    Z(mm) KinE(MeV)  dE(MeV) StepLeng TrackLeng  NextVolume ProcName
+    0 -0.000514 -1.7e-06     -500  2.89e-06        0        0         0  Core_Fiber initStep
+    1 -0.00077 -0.000205     -500  2.89e-06        0  0.00103   0.00103      Vacuum Transportation
+z = -500
+z pre = -499.9990205666377
+ANGLE = 161.5702449117608
+Fresnel Reflection
+    2 -0.00077 -0.000205     -500  2.89e-06        0        0   0.00103  Core_Fiber Transportation
+z = -500
+z pre = -500
+    3   -0.376   -0.299     -499  2.89e-06        0     1.52      1.52 Inner_Cladding_Fiber Transportation
+z = -498.5617554934927
+z pre = -500
+Reflection totale
+    4   -0.376   -0.299     -499  2.89e-06        0        0      1.52  Core_Fiber Transportation
+z = -498.5617554934927
+z pre = -498.5617554934927
+    5    0.376    0.298     -496  2.89e-06        0     3.04      4.55 Inner_Cladding_Fiber Transportation
+z = -495.6808856750135
+z pre = -498.5617554934927
+Reflection totale
+    6    0.376    0.298     -496  2.89e-06        0        0      4.55  Core_Fiber Transportation
+z = -495.6808856750135
+z pre = -495.6808856750135
+    7   -0.376   -0.298     -493  2.89e-06        0     3.04      7.59 Inner_Cladding_Fiber Transportation
+z = -492.8000158565343
+z pre = -495.6808856750135
+Reflection totale
+    8   -0.376   -0.298     -493  2.89e-06        0        0      7.59  Core_Fiber Transportation
+z = -492.8000158565343
+z pre = -492.8000158565343
+    9    0.377    0.297     -490  2.89e-06        0     3.04      10.6 Inner_Cladding_Fiber Transportation
+z = -489.9191460380551
+z pre = -492.8000158565343
+Reflection totale
+   10    0.377    0.297     -490  2.89e-06        0        0      10.6  Core_Fiber Transportation
+z = -489.9191460380551
+z pre = -489.9191460380551
+   11   -0.377   -0.297     -487  2.89e-06        0     3.04      13.7 Inner_Cladding_Fiber Transportation
+z = -487.038276219576
+z pre = -489.9191460380551
+Reflection totale
+   12   -0.377   -0.297     -487  2.89e-06        0        0      13.7  Core_Fiber Transportation
+z = -487.038276219576
+z pre = -487.038276219576
+   13    0.378    0.296     -484  2.89e-06        0     3.04      16.7 Inner_Cladding_Fiber Transportation
+z = -484.1574064010969
+z pre = -487.038276219576
+Reflection totale
+   14    0.378    0.296     -484  2.89e-06        0        0      16.7  Core_Fiber Transportation
+z = -484.1574064010969
+z pre = -484.1574064010969
+   15   -0.378   -0.296     -481  2.89e-06        0     3.04      19.7 Inner_Cladding_Fiber Transportation
+z = -481.276536582618
+z pre = -484.1574064010969
+Reflection totale
+   16   -0.378   -0.296     -481  2.89e-06        0        0      19.7  Core_Fiber Transportation
+z = -481.276536582618
+z pre = -481.276536582618
+   17    0.378    0.295     -478  2.89e-06        0     3.04      22.8 Inner_Cladding_Fiber Transportation
+z = -478.3956667641389
+z pre = -481.276536582618
+Reflection totale
+   18    0.378    0.295     -478  2.89e-06        0        0      22.8  Core_Fiber Transportation
+z = -478.3956667641389
+z pre = -478.3956667641389
+   19   -0.379   -0.295     -476  2.89e-06        0     3.04      25.8 Inner_Cladding_Fiber Transportation
+z = -475.5147969456599
+z pre = -478.3956667641389
+Reflection totale
+   20   -0.379   -0.295     -476  2.89e-06        0        0      25.8  Core_Fiber Transportation
+z = -475.5147969456599
+z pre = -475.5147969456599
+   21    0.379    0.294     -473  2.89e-06        0     3.04      28.8 Inner_Cladding_Fiber Transportation
+z = -472.6339271271809
+z pre = -475.5147969456599
+Reflection totale
+   22    0.379    0.294     -473  2.89e-06        0        0      28.8  Core_Fiber Transportation
+z = -472.6339271271809
+z pre = -472.6339271271809
+   23    -0.38   -0.294     -470  2.89e-06        0     3.04      31.9 Inner_Cladding_Fiber Transportation
+z = -469.753057308702
+z pre = -472.6339271271809
+Reflection totale
+   24    -0.38   -0.294     -470  2.89e-06        0        0      31.9  Core_Fiber Transportation
+z = -469.753057308702
+z pre = -469.753057308702
+   25     0.38    0.293     -467  2.89e-06        0     3.04      34.9 Inner_Cladding_Fiber Transportation
+z = -466.872187490223
+z pre = -469.753057308702
+Reflection totale
+   26     0.38    0.293     -467  2.89e-06        0        0      34.9  Core_Fiber Transportation
+z = -466.872187490223
+z pre = -466.872187490223
+   27    -0.38   -0.293     -464  2.89e-06        0     3.04        38 Inner_Cladding_Fiber Transportation
+z = -463.9913176717441
+z pre = -466.872187490223
+Reflection totale
+   28    -0.38   -0.293     -464  2.89e-06        0        0        38  Core_Fiber Transportation
+z = -463.9913176717441
+z pre = -463.9913176717441
+   29    0.381    0.292     -461  2.89e-06        0     3.04        41 Inner_Cladding_Fiber Transportation
+z = -461.1104478532652
+z pre = -463.9913176717441
+Reflection totale
+   30    0.381    0.292     -461  2.89e-06        0        0        41  Core_Fiber Transportation
+z = -461.1104478532652
+z pre = -461.1104478532652
+   31   -0.381   -0.292     -458  2.89e-06        0     3.04        44 Inner_Cladding_Fiber Transportation
+z = -458.2295780347864
+z pre = -461.1104478532652
+Reflection totale
+   32   -0.381   -0.292     -458  2.89e-06        0        0        44  Core_Fiber Transportation
+z = -458.2295780347864
+z pre = -458.2295780347864
+   33    0.382    0.291     -455  2.89e-06        0     3.04      47.1 Inner_Cladding_Fiber Transportation
+z = -455.3487082163076
+z pre = -458.2295780347864
+Reflection totale
+   34    0.382    0.291     -455  2.89e-06        0        0      47.1  Core_Fiber Transportation
+z = -455.3487082163076
+z pre = -455.3487082163076
+   35   -0.382   -0.291     -452  2.89e-06        0     3.04      50.1 Inner_Cladding_Fiber Transportation
+z = -452.4678383978288
+z pre = -455.3487082163076
+Reflection totale
+   36   -0.382   -0.291     -452  2.89e-06        0        0      50.1  Core_Fiber Transportation
+z = -452.4678383978288
+z pre = -452.4678383978288
+   37    0.382     0.29     -450  2.89e-06        0     3.04      53.1 Inner_Cladding_Fiber Transportation
+z = -449.5869685793501
+z pre = -452.4678383978288
+Reflection totale
+   38    0.382     0.29     -450  2.89e-06        0        0      53.1  Core_Fiber Transportation
+z = -449.5869685793501
+z pre = -449.5869685793501
+   39   -0.383    -0.29     -447  2.89e-06        0     3.04      56.2 Inner_Cladding_Fiber Transportation
+z = -446.7060987608713
+z pre = -449.5869685793501
+Reflection totale
+   40   -0.383    -0.29     -447  2.89e-06        0        0      56.2  Core_Fiber Transportation
+z = -446.7060987608713
+z pre = -446.7060987608713
+   41    0.383    0.289     -444  2.89e-06        0     3.04      59.2 Inner_Cladding_Fiber Transportation
+z = -443.8252289423926
+z pre = -446.7060987608713
+Reflection totale
+   42    0.383    0.289     -444  2.89e-06        0        0      59.2  Core_Fiber Transportation
+z = -443.8252289423926
+z pre = -443.8252289423926
+   43   -0.384   -0.289     -441  2.89e-06        0     3.04      62.2 Inner_Cladding_Fiber Transportation
+z = -440.9443591239139
+z pre = -443.8252289423926
+Reflection totale
+   44   -0.384   -0.289     -441  2.89e-06        0        0      62.2  Core_Fiber Transportation
+z = -440.9443591239139
+z pre = -440.9443591239139
+   45    0.384    0.288     -438  2.89e-06        0     3.04      65.3 Inner_Cladding_Fiber Transportation
+z = -438.0634893054352
+z pre = -440.9443591239139
+Reflection totale
+   46    0.384    0.288     -438  2.89e-06        0        0      65.3  Core_Fiber Transportation
+z = -438.0634893054352
+z pre = -438.0634893054352
+   47   -0.384   -0.288     -435  2.89e-06        0     3.04      68.3 Inner_Cladding_Fiber Transportation
+z = -435.1826194869565
+z pre = -438.0634893054352
+Reflection totale
+   48   -0.384   -0.288     -435  2.89e-06        0        0      68.3  Core_Fiber Transportation
+z = -435.1826194869565
+z pre = -435.1826194869565
+   49    0.385    0.287     -432  2.89e-06        0     3.04      71.4 Inner_Cladding_Fiber Transportation
+z = -432.3017496684779
+z pre = -435.1826194869565
+Reflection totale
+   50    0.385    0.287     -432  2.89e-06        0        0      71.4  Core_Fiber Transportation
+z = -432.3017496684779
+z pre = -432.3017496684779
+   51   -0.385   -0.287     -429  2.89e-06        0     3.04      74.4 Inner_Cladding_Fiber Transportation
+z = -429.4208798499993
+z pre = -432.3017496684779
+Reflection totale
+   52   -0.385   -0.287     -429  2.89e-06        0        0      74.4  Core_Fiber Transportation
+z = -429.4208798499993
+z pre = -429.4208798499993
+   53    0.385    0.286     -427  2.89e-06        0     3.04      77.4 Inner_Cladding_Fiber Transportation
+z = -426.5400100315206
+z pre = -429.4208798499993
+Reflection totale
+   54    0.385    0.286     -427  2.89e-06        0        0      77.4  Core_Fiber Transportation
+z = -426.5400100315206
+z pre = -426.5400100315206
+   55   -0.386   -0.286     -424  2.89e-06        0     3.04      80.5 Inner_Cladding_Fiber Transportation
+z = -423.659140213042
+z pre = -426.5400100315206
+Reflection totale
+   56   -0.386   -0.286     -424  2.89e-06        0        0      80.5  Core_Fiber Transportation
+z = -423.659140213042
+z pre = -423.659140213042
+   57    0.386    0.285     -421  2.89e-06        0     3.04      83.5 Inner_Cladding_Fiber Transportation
+z = -420.7782703945634
+z pre = -423.659140213042
+Reflection totale
+   58    0.386    0.285     -421  2.89e-06        0        0      83.5  Core_Fiber Transportation
+z = -420.7782703945634
+z pre = -420.7782703945634
+   59   -0.387   -0.285     -418  2.89e-06        0     3.04      86.5 Inner_Cladding_Fiber Transportation
+z = -417.8974005760849
+z pre = -420.7782703945634
+Reflection totale
+   60   -0.387   -0.285     -418  2.89e-06        0        0      86.5  Core_Fiber Transportation
+z = -417.8974005760849
+z pre = -417.8974005760849
+   61    0.387    0.284     -415  2.89e-06        0     3.04      89.6 Inner_Cladding_Fiber Transportation
+z = -415.0165307576063
+z pre = -417.8974005760849
+Reflection totale
+   62    0.387    0.284     -415  2.89e-06        0        0      89.6  Core_Fiber Transportation
+z = -415.0165307576063
+z pre = -415.0165307576063
+   63   -0.387   -0.284     -412  2.89e-06        0     3.04      92.6 Inner_Cladding_Fiber Transportation
+z = -412.1356609391279
+z pre = -415.0165307576063
+Reflection totale
+   64   -0.387   -0.284     -412  2.89e-06        0        0      92.6  Core_Fiber Transportation
+z = -412.1356609391279
+z pre = -412.1356609391279
+   65    0.388    0.283     -409  2.89e-06        0     3.04      95.7 Inner_Cladding_Fiber Transportation
+z = -409.2547911206494
+z pre = -412.1356609391279
+Reflection totale
+   66    0.388    0.283     -409  2.89e-06        0        0      95.7  Core_Fiber Transportation
+z = -409.2547911206494
+z pre = -409.2547911206494
+   67   -0.388   -0.282     -406  2.89e-06        0     3.04      98.7 Inner_Cladding_Fiber Transportation
+z = -406.373921302171
+z pre = -409.2547911206494
+Reflection totale
+   68   -0.388   -0.282     -406  2.89e-06        0        0      98.7  Core_Fiber Transportation
+z = -406.373921302171
+z pre = -406.373921302171
+   69    0.388    0.282     -403  2.89e-06        0     3.04       102 Inner_Cladding_Fiber Transportation
+z = -403.4930514836927
+z pre = -406.373921302171
+Reflection totale
+   70    0.388    0.282     -403  2.89e-06        0        0       102  Core_Fiber Transportation
+z = -403.4930514836927
+z pre = -403.4930514836927
+   71   -0.389   -0.281     -401  2.89e-06        0     3.04       105 Inner_Cladding_Fiber Transportation
+z = -400.6121816652143
+z pre = -403.4930514836927
+Reflection totale
+   72   -0.389   -0.281     -401  2.89e-06        0        0       105  Core_Fiber Transportation
+z = -400.6121816652143
+z pre = -400.6121816652143
+   73    0.389    0.281     -398  2.89e-06        0     3.04       108 Inner_Cladding_Fiber Transportation
+z = -397.7313118467359
+z pre = -400.6121816652143
+Reflection totale
+   74    0.389    0.281     -398  2.89e-06        0        0       108  Core_Fiber Transportation
+z = -397.7313118467359
+z pre = -397.7313118467359
+   75    -0.39    -0.28     -395  2.89e-06        0     3.04       111 Inner_Cladding_Fiber Transportation
+z = -394.8504420282576
+z pre = -397.7313118467359
+Reflection totale
+   76    -0.39    -0.28     -395  2.89e-06        0        0       111  Core_Fiber Transportation
+z = -394.8504420282576
+z pre = -394.8504420282576
+   77     0.39     0.28     -392  2.89e-06        0     3.04       114 Inner_Cladding_Fiber Transportation
+z = -391.9695722097793
+z pre = -394.8504420282576
+Reflection totale
+   78     0.39     0.28     -392  2.89e-06        0        0       114  Core_Fiber Transportation
+z = -391.9695722097793
+z pre = -391.9695722097793
+   79    -0.39   -0.279     -389  2.89e-06        0     3.04       117 Inner_Cladding_Fiber Transportation
+z = -389.0887023913011
+z pre = -391.9695722097793
+Reflection totale
+   80    -0.39   -0.279     -389  2.89e-06        0        0       117  Core_Fiber Transportation
+z = -389.0887023913011
+z pre = -389.0887023913011
+   81    0.391    0.279     -386  2.89e-06        0     3.04       120 Inner_Cladding_Fiber Transportation
+z = -386.2078325728228
+z pre = -389.0887023913011
+Reflection totale
+   82    0.391    0.279     -386  2.89e-06        0        0       120  Core_Fiber Transportation
+z = -386.2078325728228
+z pre = -386.2078325728228
+   83   -0.391   -0.278     -383  2.89e-06        0     3.04       123 Inner_Cladding_Fiber Transportation
+z = -383.3269627543447
+z pre = -386.2078325728228
+Reflection totale
+   84   -0.391   -0.278     -383  2.89e-06        0        0       123  Core_Fiber Transportation
+z = -383.3269627543447
+z pre = -383.3269627543447
+   85    0.391    0.278     -380  2.89e-06        0     3.04       126 Inner_Cladding_Fiber Transportation
+z = -380.4460929358665
+z pre = -383.3269627543447
+Reflection totale
+   86    0.391    0.278     -380  2.89e-06        0        0       126  Core_Fiber Transportation
+z = -380.4460929358665
+z pre = -380.4460929358665
+   87   -0.392   -0.277     -378  2.89e-06        0     3.04       129 Inner_Cladding_Fiber Transportation
+z = -377.5652231173883
+z pre = -380.4460929358665
+Reflection totale
+   88   -0.392   -0.277     -378  2.89e-06        0        0       129  Core_Fiber Transportation
+z = -377.5652231173883
+z pre = -377.5652231173883
+   89    0.392    0.277     -375  2.89e-06        0     3.04       132 Inner_Cladding_Fiber Transportation
+z = -374.68435329891
+z pre = -377.5652231173883
+Reflection totale
+   90    0.392    0.277     -375  2.89e-06        0        0       132  Core_Fiber Transportation
+z = -374.68435329891
+z pre = -374.68435329891
+   91   -0.393   -0.276     -372  2.89e-06        0     3.04       135 Inner_Cladding_Fiber Transportation
+z = -371.8034834804319
+z pre = -374.68435329891
+Reflection totale
+   92   -0.393   -0.276     -372  2.89e-06        0        0       135  Core_Fiber Transportation
+z = -371.8034834804319
+z pre = -371.8034834804319
+   93    0.393    0.276     -369  2.89e-06        0     3.04       138 Inner_Cladding_Fiber Transportation
+z = -368.9226136619538
+z pre = -371.8034834804319
+Reflection totale
+   94    0.393    0.276     -369  2.89e-06        0        0       138  Core_Fiber Transportation
+z = -368.9226136619538
+z pre = -368.9226136619538
+   95   -0.393   -0.275     -366  2.89e-06        0     3.04       141 Inner_Cladding_Fiber Transportation
+z = -366.0417438434757
+z pre = -368.9226136619538
+Reflection totale
+   96   -0.393   -0.275     -366  2.89e-06        0        0       141  Core_Fiber Transportation
+z = -366.0417438434757
+z pre = -366.0417438434757
+   97    0.394    0.275     -363  2.89e-06        0     3.04       144 Inner_Cladding_Fiber Transportation
+z = -363.1608740249976
+z pre = -366.0417438434757
+Reflection totale
+   98    0.394    0.275     -363  2.89e-06        0        0       144  Core_Fiber Transportation
+z = -363.1608740249976
+z pre = -363.1608740249976
+   99   -0.394   -0.274     -360  2.89e-06        0     3.04       147 Inner_Cladding_Fiber Transportation
+z = -360.2800042065196
+z pre = -363.1608740249976
+Reflection totale
+  100   -0.394   -0.274     -360  2.89e-06        0        0       147  Core_Fiber Transportation
+z = -360.2800042065196
+z pre = -360.2800042065196
+  101    0.394    0.274     -357  2.89e-06        0     3.04       150 Inner_Cladding_Fiber Transportation
+z = -357.3991343880417
+z pre = -360.2800042065196
+Reflection totale
+  102    0.394    0.274     -357  2.89e-06        0        0       150  Core_Fiber Transportation
+z = -357.3991343880417
+z pre = -357.3991343880417
+  103   -0.395   -0.273     -355  2.89e-06        0     3.04       153 Inner_Cladding_Fiber Transportation
+z = -354.5182645695638
+z pre = -357.3991343880417
+Reflection totale
+  104   -0.395   -0.273     -355  2.89e-06        0        0       153  Core_Fiber Transportation
+z = -354.5182645695638
+z pre = -354.5182645695638
+  105    0.395    0.273     -352  2.89e-06        0     3.04       156 Inner_Cladding_Fiber Transportation
+z = -351.637394751086
+z pre = -354.5182645695638
+Reflection totale
+  106    0.395    0.273     -352  2.89e-06        0        0       156  Core_Fiber Transportation
+z = -351.637394751086
+z pre = -351.637394751086
+  107   -0.395   -0.272     -349  2.89e-06        0     3.04       159 Inner_Cladding_Fiber Transportation
+z = -348.7565249326082
+z pre = -351.637394751086
+Reflection totale
+  108   -0.395   -0.272     -349  2.89e-06        0        0       159  Core_Fiber Transportation
+z = -348.7565249326082
+z pre = -348.7565249326082
+  109    0.396    0.272     -346  2.89e-06        0     3.04       162 Inner_Cladding_Fiber Transportation
+z = -345.8756551141304
+z pre = -348.7565249326082
+Reflection totale
+  110    0.396    0.272     -346  2.89e-06        0        0       162  Core_Fiber Transportation
+z = -345.8756551141304
+z pre = -345.8756551141304
+  111   -0.396   -0.271     -343  2.89e-06        0     3.04       165 Inner_Cladding_Fiber Transportation
+z = -342.9947852956527
+z pre = -345.8756551141304
+Reflection totale
+  112   -0.396   -0.271     -343  2.89e-06        0        0       165  Core_Fiber Transportation
+z = -342.9947852956527
+z pre = -342.9947852956527
+  113    0.397     0.27     -340  2.89e-06        0     3.04       169 Inner_Cladding_Fiber Transportation
+z = -340.1139154771749
+z pre = -342.9947852956527
+Reflection totale
+  114    0.397     0.27     -340  2.89e-06        0        0       169  Core_Fiber Transportation
+z = -340.1139154771749
+z pre = -340.1139154771749
+  115   -0.397    -0.27     -337  2.89e-06        0     3.04       172 Inner_Cladding_Fiber Transportation
+z = -337.2330456586972
+z pre = -340.1139154771749
+Reflection totale
+  116   -0.397    -0.27     -337  2.89e-06        0        0       172  Core_Fiber Transportation
+z = -337.2330456586972
+z pre = -337.2330456586972
+  117    0.397    0.269     -334  2.89e-06        0     3.04       175 Inner_Cladding_Fiber Transportation
+z = -334.3521758402196
+z pre = -337.2330456586972
+Reflection totale
+  118    0.397    0.269     -334  2.89e-06        0        0       175  Core_Fiber Transportation
+z = -334.3521758402196
+z pre = -334.3521758402196
+  119   -0.398   -0.269     -331  2.89e-06        0     3.04       178 Inner_Cladding_Fiber Transportation
+z = -331.471306021742
+z pre = -334.3521758402196
+Reflection totale
+  120   -0.398   -0.269     -331  2.89e-06        0        0       178  Core_Fiber Transportation
+z = -331.471306021742
+z pre = -331.471306021742
+  121    0.398    0.268     -329  2.89e-06        0     3.04       181 Inner_Cladding_Fiber Transportation
+z = -328.5904362032644
+z pre = -331.471306021742
+Reflection totale
+  122    0.398    0.268     -329  2.89e-06        0        0       181  Core_Fiber Transportation
+z = -328.5904362032644
+z pre = -328.5904362032644
+  123   -0.398   -0.268     -326  2.89e-06        0     3.04       184 Inner_Cladding_Fiber Transportation
+z = -325.7095663847869
+z pre = -328.5904362032644
+Reflection totale
+  124   -0.398   -0.268     -326  2.89e-06        0        0       184  Core_Fiber Transportation
+z = -325.7095663847869
+z pre = -325.7095663847869
+  125    0.399    0.267     -323  2.89e-06        0     3.04       187 Inner_Cladding_Fiber Transportation
+z = -322.8286965663093
+z pre = -325.7095663847869
+Reflection totale
+  126    0.399    0.267     -323  2.89e-06        0        0       187  Core_Fiber Transportation
+z = -322.8286965663093
+z pre = -322.8286965663093
+  127   -0.399   -0.267     -320  2.89e-06        0     3.04       190 Inner_Cladding_Fiber Transportation
+z = -319.9478267478318
+z pre = -322.8286965663093
+Reflection totale
+  128   -0.399   -0.267     -320  2.89e-06        0        0       190  Core_Fiber Transportation
+z = -319.9478267478318
+z pre = -319.9478267478318
+  129    0.399    0.266     -317  2.89e-06        0     3.04       193 Inner_Cladding_Fiber Transportation
+z = -317.0669569293543
+z pre = -319.9478267478318
+Reflection totale
+  130    0.399    0.266     -317  2.89e-06        0        0       193  Core_Fiber Transportation
+z = -317.0669569293543
+z pre = -317.0669569293543
+  131     -0.4   -0.266     -314  2.89e-06        0     3.04       196 Inner_Cladding_Fiber Transportation
+z = -314.1860871108768
+z pre = -317.0669569293543
+Reflection totale
+  132     -0.4   -0.266     -314  2.89e-06        0        0       196  Core_Fiber Transportation
+z = -314.1860871108768
+z pre = -314.1860871108768
+  133      0.4    0.265     -311  2.89e-06        0     3.04       199 Inner_Cladding_Fiber Transportation
+z = -311.3052172923994
+z pre = -314.1860871108768
+Reflection totale
+  134      0.4    0.265     -311  2.89e-06        0        0       199  Core_Fiber Transportation
+z = -311.3052172923994
+z pre = -311.3052172923994
+  135     -0.4   -0.265     -308  2.89e-06        0     3.04       202 Inner_Cladding_Fiber Transportation
+z = -308.4243474739221
+z pre = -311.3052172923994
+Reflection totale
+  136     -0.4   -0.265     -308  2.89e-06        0        0       202  Core_Fiber Transportation
+z = -308.4243474739221
+z pre = -308.4243474739221
+  137    0.401    0.264     -306  2.89e-06        0     3.04       205 Inner_Cladding_Fiber Transportation
+z = -305.5434776554447
+z pre = -308.4243474739221
+Reflection totale
+  138    0.401    0.264     -306  2.89e-06        0        0       205  Core_Fiber Transportation
+z = -305.5434776554447
+z pre = -305.5434776554447
+  139   -0.401   -0.264     -303  2.89e-06        0     3.04       208 Inner_Cladding_Fiber Transportation
+z = -302.6626078369673
+z pre = -305.5434776554447
+Reflection totale
+  140   -0.401   -0.264     -303  2.89e-06        0        0       208  Core_Fiber Transportation
+z = -302.6626078369673
+z pre = -302.6626078369673
+  141    0.401    0.263     -300  2.89e-06        0     3.04       211 Inner_Cladding_Fiber Transportation
+z = -299.7817380184899
+z pre = -302.6626078369673
+Reflection totale
+  142    0.401    0.263     -300  2.89e-06        0        0       211  Core_Fiber Transportation
+z = -299.7817380184899
+z pre = -299.7817380184899
+  143   -0.402   -0.263     -297  2.89e-06        0     3.04       214 Inner_Cladding_Fiber Transportation
+z = -296.9008682000126
+z pre = -299.7817380184899
+Reflection totale
+  144   -0.402   -0.263     -297  2.89e-06        0        0       214  Core_Fiber Transportation
+z = -296.9008682000126
+z pre = -296.9008682000126
+  145    0.402    0.262     -294  2.89e-06        0     3.04       217 Inner_Cladding_Fiber Transportation
+z = -294.0199983815353
+z pre = -296.9008682000126
+Reflection totale
+  146    0.402    0.262     -294  2.89e-06        0        0       217  Core_Fiber Transportation
+z = -294.0199983815353
+z pre = -294.0199983815353
+  147   -0.403   -0.261     -291  2.89e-06        0     3.04       220 Inner_Cladding_Fiber Transportation
+z = -291.139128563058
+z pre = -294.0199983815353
+Reflection totale
+  148   -0.403   -0.261     -291  2.89e-06        0        0       220  Core_Fiber Transportation
+z = -291.139128563058
+z pre = -291.139128563058
+  149    0.403    0.261     -288  2.89e-06        0     3.04       223 Inner_Cladding_Fiber Transportation
+z = -288.2582587445807
+z pre = -291.139128563058
+Reflection totale
+  150    0.403    0.261     -288  2.89e-06        0        0       223  Core_Fiber Transportation
+z = -288.2582587445807
+z pre = -288.2582587445807
+  151   -0.403    -0.26     -285  2.89e-06        0     3.04       226 Inner_Cladding_Fiber Transportation
+z = -285.3773889261035
+z pre = -288.2582587445807
+Reflection totale
+  152   -0.403    -0.26     -285  2.89e-06        0        0       226  Core_Fiber Transportation
+z = -285.3773889261035
+z pre = -285.3773889261035
+  153    0.404     0.26     -282  2.89e-06        0     3.04       229 Inner_Cladding_Fiber Transportation
+z = -282.4965191076262
+z pre = -285.3773889261035
+Reflection totale
+  154    0.404     0.26     -282  2.89e-06        0        0       229  Core_Fiber Transportation
+z = -282.4965191076262
+z pre = -282.4965191076262
+  155   -0.404   -0.259     -280  2.89e-06        0     3.04       232 Inner_Cladding_Fiber Transportation
+z = -279.615649289149
+z pre = -282.4965191076262
+Reflection totale
+  156   -0.404   -0.259     -280  2.89e-06        0        0       232  Core_Fiber Transportation
+z = -279.615649289149
+z pre = -279.615649289149
+  157    0.404    0.259     -277  2.89e-06        0     3.04       235 Inner_Cladding_Fiber Transportation
+z = -276.7347794706718
+z pre = -279.615649289149
+Reflection totale
+  158    0.404    0.259     -277  2.89e-06        0        0       235  Core_Fiber Transportation
+z = -276.7347794706718
+z pre = -276.7347794706718
+  159   -0.405   -0.258     -274  2.89e-06        0     3.04       238 Inner_Cladding_Fiber Transportation
+z = -273.8539096521945
+z pre = -276.7347794706718
+Reflection totale
+  160   -0.405   -0.258     -274  2.89e-06        0        0       238  Core_Fiber Transportation
+z = -273.8539096521945
+z pre = -273.8539096521945
+  161    0.405    0.258     -271  2.89e-06        0     3.04       241 Inner_Cladding_Fiber Transportation
+z = -270.9730398337174
+z pre = -273.8539096521945
+Reflection totale
+  162    0.405    0.258     -271  2.89e-06        0        0       241  Core_Fiber Transportation
+z = -270.9730398337174
+z pre = -270.9730398337174
+  163   -0.405   -0.257     -268  2.89e-06        0     3.04       244 Inner_Cladding_Fiber Transportation
+z = -268.0921700152403
+z pre = -270.9730398337174
+Reflection totale
+  164   -0.405   -0.257     -268  2.89e-06        0        0       244  Core_Fiber Transportation
+z = -268.0921700152403
+z pre = -268.0921700152403
+  165    0.406    0.257     -265  2.89e-06        0     3.04       247 Inner_Cladding_Fiber Transportation
+z = -265.2113001967632
+z pre = -268.0921700152403
+Reflection totale
+  166    0.406    0.257     -265  2.89e-06        0        0       247  Core_Fiber Transportation
+z = -265.2113001967632
+z pre = -265.2113001967632
+  167   -0.406   -0.256     -262  2.89e-06        0     3.04       251 Inner_Cladding_Fiber Transportation
+z = -262.3304303782862
+z pre = -265.2113001967632
+Reflection totale
+  168   -0.406   -0.256     -262  2.89e-06        0        0       251  Core_Fiber Transportation
+z = -262.3304303782862
+z pre = -262.3304303782862
+  169    0.406    0.256     -259  2.89e-06        0     3.04       254 Inner_Cladding_Fiber Transportation
+z = -259.4495605598092
+z pre = -262.3304303782862
+Reflection totale
+  170    0.406    0.256     -259  2.89e-06        0        0       254  Core_Fiber Transportation
+z = -259.4495605598092
+z pre = -259.4495605598092
+  171   -0.407   -0.255     -257  2.89e-06        0     3.04       257 Inner_Cladding_Fiber Transportation
+z = -256.5686907413321
+z pre = -259.4495605598092
+Reflection totale
+  172   -0.407   -0.255     -257  2.89e-06        0        0       257  Core_Fiber Transportation
+z = -256.5686907413321
+z pre = -256.5686907413321
+  173    0.407    0.254     -254  2.89e-06        0     3.04       260 Inner_Cladding_Fiber Transportation
+z = -253.6878209228551
+z pre = -256.5686907413321
+Reflection totale
+  174    0.407    0.254     -254  2.89e-06        0        0       260  Core_Fiber Transportation
+z = -253.6878209228551
+z pre = -253.6878209228551
+  175   -0.407   -0.254     -251  2.89e-06        0     3.04       263 Inner_Cladding_Fiber Transportation
+z = -250.8069511043781
+z pre = -253.6878209228551
+Reflection totale
+  176   -0.407   -0.254     -251  2.89e-06        0        0       263  Core_Fiber Transportation
+z = -250.8069511043781
+z pre = -250.8069511043781
+  177    0.408    0.253     -248  2.89e-06        0     3.04       266 Inner_Cladding_Fiber Transportation
+z = -247.9260812859011
+z pre = -250.8069511043781
+Reflection totale
+  178    0.408    0.253     -248  2.89e-06        0        0       266  Core_Fiber Transportation
+z = -247.9260812859011
+z pre = -247.9260812859011
+  179   -0.408   -0.253     -245  2.89e-06        0     3.04       269 Inner_Cladding_Fiber Transportation
+z = -245.0452114674242
+z pre = -247.9260812859011
+Reflection totale
+  180   -0.408   -0.253     -245  2.89e-06        0        0       269  Core_Fiber Transportation
+z = -245.0452114674242
+z pre = -245.0452114674242
+  181    0.408    0.252     -242  2.89e-06        0     3.04       272 Inner_Cladding_Fiber Transportation
+z = -242.1643416489472
+z pre = -245.0452114674242
+Reflection totale
+  182    0.408    0.252     -242  2.89e-06        0        0       272  Core_Fiber Transportation
+z = -242.1643416489472
+z pre = -242.1643416489472
+  183   -0.409   -0.252     -239  2.89e-06        0     3.04       275 Inner_Cladding_Fiber Transportation
+z = -239.2834718304704
+z pre = -242.1643416489472
+Reflection totale
+  184   -0.409   -0.252     -239  2.89e-06        0        0       275  Core_Fiber Transportation
+z = -239.2834718304704
+z pre = -239.2834718304704
+  185    0.409    0.251     -236  2.89e-06        0     3.04       278 Inner_Cladding_Fiber Transportation
+z = -236.4026020119936
+z pre = -239.2834718304704
+Reflection totale
+  186    0.409    0.251     -236  2.89e-06        0        0       278  Core_Fiber Transportation
+z = -236.4026020119936
+z pre = -236.4026020119936
+  187   -0.409   -0.251     -234  2.89e-06        0     3.04       281 Inner_Cladding_Fiber Transportation
+z = -233.5217321935168
+z pre = -236.4026020119936
+Reflection totale
+  188   -0.409   -0.251     -234  2.89e-06        0        0       281  Core_Fiber Transportation
+z = -233.5217321935168
+z pre = -233.5217321935168
+  189     0.41     0.25     -231  2.89e-06        0     3.04       284 Inner_Cladding_Fiber Transportation
+z = -230.6408623750401
+z pre = -233.5217321935168
+Reflection totale
+  190     0.41     0.25     -231  2.89e-06        0        0       284  Core_Fiber Transportation
+z = -230.6408623750401
+z pre = -230.6408623750401
+  191    -0.41    -0.25     -228  2.89e-06        0     3.04       287 Inner_Cladding_Fiber Transportation
+z = -227.7599925565634
+z pre = -230.6408623750401
+Reflection totale
+  192    -0.41    -0.25     -228  2.89e-06        0        0       287  Core_Fiber Transportation
+z = -227.7599925565634
+z pre = -227.7599925565634
+  193     0.41    0.249     -225  2.89e-06        0     3.04       290 Inner_Cladding_Fiber Transportation
+z = -224.8791227380868
+z pre = -227.7599925565634
+Reflection totale
+  194     0.41    0.249     -225  2.89e-06        0        0       290  Core_Fiber Transportation
+z = -224.8791227380868
+z pre = -224.8791227380868
+  195   -0.411   -0.248     -222  2.89e-06        0     3.04       293 Inner_Cladding_Fiber Transportation
+z = -221.9982529196102
+z pre = -224.8791227380868
+Reflection totale
+  196   -0.411   -0.248     -222  2.89e-06        0        0       293  Core_Fiber Transportation
+z = -221.9982529196102
+z pre = -221.9982529196102
+  197    0.411    0.248     -219  2.89e-06        0     3.04       296 Inner_Cladding_Fiber Transportation
+z = -219.1173831011336
+z pre = -221.9982529196102
+Reflection totale
+  198    0.411    0.248     -219  2.89e-06        0        0       296  Core_Fiber Transportation
+z = -219.1173831011336
+z pre = -219.1173831011336
+  199   -0.411   -0.247     -216  2.89e-06        0     3.04       299 Inner_Cladding_Fiber Transportation
+z = -216.236513282657
+z pre = -219.1173831011336
+Reflection totale
+  200   -0.411   -0.247     -216  2.89e-06        0        0       299  Core_Fiber Transportation
+z = -216.236513282657
+z pre = -216.236513282657
+  201    0.412    0.247     -213  2.89e-06        0     3.04       302 Inner_Cladding_Fiber Transportation
+z = -213.3556434641806
+z pre = -216.236513282657
+Reflection totale
+  202    0.412    0.247     -213  2.89e-06        0        0       302  Core_Fiber Transportation
+z = -213.3556434641806
+z pre = -213.3556434641806
+  203   -0.412   -0.246     -210  2.89e-06        0     3.04       305 Inner_Cladding_Fiber Transportation
+z = -210.4747736457042
+z pre = -213.3556434641806
+Reflection totale
+  204   -0.412   -0.246     -210  2.89e-06        0        0       305  Core_Fiber Transportation
+z = -210.4747736457042
+z pre = -210.4747736457042
+  205    0.412    0.246     -208  2.89e-06        0     3.04       308 Inner_Cladding_Fiber Transportation
+z = -207.5939038272278
+z pre = -210.4747736457042
+Reflection totale
+  206    0.412    0.246     -208  2.89e-06        0        0       308  Core_Fiber Transportation
+z = -207.5939038272278
+z pre = -207.5939038272278
+  207   -0.413   -0.245     -205  2.89e-06        0     3.04       311 Inner_Cladding_Fiber Transportation
+z = -204.7130340087514
+z pre = -207.5939038272278
+Reflection totale
+  208   -0.413   -0.245     -205  2.89e-06        0        0       311  Core_Fiber Transportation
+z = -204.7130340087514
+z pre = -204.7130340087514
+  209    0.413    0.245     -202  2.89e-06        0     3.04       314 Inner_Cladding_Fiber Transportation
+z = -201.8321641902751
+z pre = -204.7130340087514
+Reflection totale
+  210    0.413    0.245     -202  2.89e-06        0        0       314  Core_Fiber Transportation
+z = -201.8321641902751
+z pre = -201.8321641902751
+  211   -0.413   -0.244     -199  2.89e-06        0     3.04       317 Inner_Cladding_Fiber Transportation
+z = -198.9512943717988
+z pre = -201.8321641902751
+Reflection totale
+  212   -0.413   -0.244     -199  2.89e-06        0        0       317  Core_Fiber Transportation
+z = -198.9512943717988
+z pre = -198.9512943717988
+  213    0.414    0.244     -196  2.89e-06        0     3.04       320 Inner_Cladding_Fiber Transportation
+z = -196.0704245533225
+z pre = -198.9512943717988
+Reflection totale
+  214    0.414    0.244     -196  2.89e-06        0        0       320  Core_Fiber Transportation
+z = -196.0704245533225
+z pre = -196.0704245533225
+  215   -0.414   -0.243     -193  2.89e-06        0     3.04       323 Inner_Cladding_Fiber Transportation
+z = -193.1895547348463
+z pre = -196.0704245533225
+Reflection totale
+  216   -0.414   -0.243     -193  2.89e-06        0        0       323  Core_Fiber Transportation
+z = -193.1895547348463
+z pre = -193.1895547348463
+  217    0.414    0.242     -190  2.89e-06        0     3.04       326 Inner_Cladding_Fiber Transportation
+z = -190.3086849163701
+z pre = -193.1895547348463
+Reflection totale
+  218    0.414    0.242     -190  2.89e-06        0        0       326  Core_Fiber Transportation
+z = -190.3086849163701
+z pre = -190.3086849163701
+  219   -0.415   -0.242     -187  2.89e-06        0     3.04       329 Inner_Cladding_Fiber Transportation
+z = -187.4278150978939
+z pre = -190.3086849163701
+Reflection totale
+  220   -0.415   -0.242     -187  2.89e-06        0        0       329  Core_Fiber Transportation
+z = -187.4278150978939
+z pre = -187.4278150978939
+  221    0.415    0.241     -185  2.89e-06        0     3.04       333 Inner_Cladding_Fiber Transportation
+z = -184.5469452794177
+z pre = -187.4278150978939
+Reflection totale
+  222    0.415    0.241     -185  2.89e-06        0        0       333  Core_Fiber Transportation
+z = -184.5469452794177
+z pre = -184.5469452794177
+  223   -0.415   -0.241     -182  2.89e-06        0     3.04       336 Inner_Cladding_Fiber Transportation
+z = -181.6660754609416
+z pre = -184.5469452794177
+Reflection totale
+  224   -0.415   -0.241     -182  2.89e-06        0        0       336  Core_Fiber Transportation
+z = -181.6660754609416
+z pre = -181.6660754609416
+  225    0.416     0.24     -179  2.89e-06        0     3.04       339 Inner_Cladding_Fiber Transportation
+z = -178.7852056424654
+z pre = -181.6660754609416
+Reflection totale
+  226    0.416     0.24     -179  2.89e-06        0        0       339  Core_Fiber Transportation
+z = -178.7852056424654
+z pre = -178.7852056424654
+  227   -0.416    -0.24     -176  2.89e-06        0     3.04       342 Inner_Cladding_Fiber Transportation
+z = -175.9043358239893
+z pre = -178.7852056424654
+Reflection totale
+  228   -0.416    -0.24     -176  2.89e-06        0        0       342  Core_Fiber Transportation
+z = -175.9043358239893
+z pre = -175.9043358239893
+  229    0.416    0.239     -173  2.89e-06        0     3.04       345 Inner_Cladding_Fiber Transportation
+z = -173.0234660055132
+z pre = -175.9043358239893
+Reflection totale
+  230    0.416    0.239     -173  2.89e-06        0        0       345  Core_Fiber Transportation
+z = -173.0234660055132
+z pre = -173.0234660055132
+  231   -0.417   -0.239     -170  2.89e-06        0     3.04       348 Inner_Cladding_Fiber Transportation
+z = -170.1425961870372
+z pre = -173.0234660055132
+Reflection totale
+  232   -0.417   -0.239     -170  2.89e-06        0        0       348  Core_Fiber Transportation
+z = -170.1425961870372
+z pre = -170.1425961870372
+  233    0.417    0.238     -167  2.89e-06        0     3.04       351 Inner_Cladding_Fiber Transportation
+z = -167.2617263685612
+z pre = -170.1425961870372
+Reflection totale
+  234    0.417    0.238     -167  2.89e-06        0        0       351  Core_Fiber Transportation
+z = -167.2617263685612
+z pre = -167.2617263685612
+  235   -0.417   -0.237     -164  2.89e-06        0     3.04       354 Inner_Cladding_Fiber Transportation
+z = -164.3808565500853
+z pre = -167.2617263685612
+Reflection totale
+  236   -0.417   -0.237     -164  2.89e-06        0        0       354  Core_Fiber Transportation
+z = -164.3808565500853
+z pre = -164.3808565500853
+  237    0.417    0.237     -161  2.89e-06        0     3.04       357 Inner_Cladding_Fiber Transportation
+z = -161.4999867316093
+z pre = -164.3808565500853
+Reflection totale
+  238    0.417    0.237     -161  2.89e-06        0        0       357  Core_Fiber Transportation
+z = -161.4999867316093
+z pre = -161.4999867316093
+  239   -0.418   -0.236     -159  2.89e-06        0     3.04       360 Inner_Cladding_Fiber Transportation
+z = -158.6191169131334
+z pre = -161.4999867316093
+Reflection totale
+  240   -0.418   -0.236     -159  2.89e-06        0        0       360  Core_Fiber Transportation
+z = -158.6191169131334
+z pre = -158.6191169131334
+  241    0.418    0.236     -156  2.89e-06        0     3.04       363 Inner_Cladding_Fiber Transportation
+z = -155.7382470946575
+z pre = -158.6191169131334
+Reflection totale
+  242    0.418    0.236     -156  2.89e-06        0        0       363  Core_Fiber Transportation
+z = -155.7382470946575
+z pre = -155.7382470946575
+  243   -0.418   -0.235     -153  2.89e-06        0     3.04       366 Inner_Cladding_Fiber Transportation
+z = -152.8573772761816
+z pre = -155.7382470946575
+Reflection totale
+  244   -0.418   -0.235     -153  2.89e-06        0        0       366  Core_Fiber Transportation
+z = -152.8573772761816
+z pre = -152.8573772761816
+  245    0.419    0.235     -150  2.89e-06        0     3.04       369 Inner_Cladding_Fiber Transportation
+z = -149.9765074577058
+z pre = -152.8573772761816
+Reflection totale
+  246    0.419    0.235     -150  2.89e-06        0        0       369  Core_Fiber Transportation
+z = -149.9765074577058
+z pre = -149.9765074577058
+  247   -0.419   -0.234     -147  2.89e-06        0     3.04       372 Inner_Cladding_Fiber Transportation
+z = -147.09563763923
+z pre = -149.9765074577058
+Reflection totale
+  248   -0.419   -0.234     -147  2.89e-06        0        0       372  Core_Fiber Transportation
+z = -147.09563763923
+z pre = -147.09563763923
+  249    0.419    0.234     -144  2.89e-06        0     3.04       375 Inner_Cladding_Fiber Transportation
+z = -144.2147678207542
+z pre = -147.09563763923
+Reflection totale
+  250    0.419    0.234     -144  2.89e-06        0        0       375  Core_Fiber Transportation
+z = -144.2147678207542
+z pre = -144.2147678207542
+  251    -0.42   -0.233     -141  2.89e-06        0     3.04       378 Inner_Cladding_Fiber Transportation
+z = -141.3338980022785
+z pre = -144.2147678207542
+Reflection totale
+  252    -0.42   -0.233     -141  2.89e-06        0        0       378  Core_Fiber Transportation
+z = -141.3338980022785
+z pre = -141.3338980022785
+  253     0.42    0.232     -138  2.89e-06        0     3.04       381 Inner_Cladding_Fiber Transportation
+z = -138.4530281838028
+z pre = -141.3338980022785
+Reflection totale
+  254     0.42    0.232     -138  2.89e-06        0        0       381  Core_Fiber Transportation
+z = -138.4530281838028
+z pre = -138.4530281838028
+  255    -0.42   -0.232     -136  2.89e-06        0     3.04       384 Inner_Cladding_Fiber Transportation
+z = -135.5721583653272
+z pre = -138.4530281838028
+Reflection totale
+  256    -0.42   -0.232     -136  2.89e-06        0        0       384  Core_Fiber Transportation
+z = -135.5721583653272
+z pre = -135.5721583653272
+  257    0.421    0.231     -133  2.89e-06        0     3.04       387 Inner_Cladding_Fiber Transportation
+z = -132.6912885468517
+z pre = -135.5721583653272
+Reflection totale
+  258    0.421    0.231     -133  2.89e-06        0        0       387  Core_Fiber Transportation
+z = -132.6912885468517
+z pre = -132.6912885468517
+  259   -0.421   -0.231     -130  2.89e-06        0     3.04       390 Inner_Cladding_Fiber Transportation
+z = -129.8104187283761
+z pre = -132.6912885468517
+Reflection totale
+  260   -0.421   -0.231     -130  2.89e-06        0        0       390  Core_Fiber Transportation
+z = -129.8104187283761
+z pre = -129.8104187283761
+  261    0.421     0.23     -127  2.89e-06        0     3.04       393 Inner_Cladding_Fiber Transportation
+z = -126.9295489099005
+z pre = -129.8104187283761
+Reflection totale
+  262    0.421     0.23     -127  2.89e-06        0        0       393  Core_Fiber Transportation
+z = -126.9295489099005
+z pre = -126.9295489099005
+  263   -0.421    -0.23     -124  2.89e-06        0     3.04       396 Inner_Cladding_Fiber Transportation
+z = -124.048679091425
+z pre = -126.9295489099005
+Reflection totale
+  264   -0.421    -0.23     -124  2.89e-06        0        0       396  Core_Fiber Transportation
+z = -124.048679091425
+z pre = -124.048679091425
+  265    0.422    0.229     -121  2.89e-06        0     3.04       399 Inner_Cladding_Fiber Transportation
+z = -121.1678092729495
+z pre = -124.048679091425
+Reflection totale
+  266    0.422    0.229     -121  2.89e-06        0        0       399  Core_Fiber Transportation
+z = -121.1678092729495
+z pre = -121.1678092729495
+  267   -0.422   -0.229     -118  2.89e-06        0     3.04       402 Inner_Cladding_Fiber Transportation
+z = -118.286939454474
+z pre = -121.1678092729495
+Reflection totale
+  268   -0.422   -0.229     -118  2.89e-06        0        0       402  Core_Fiber Transportation
+z = -118.286939454474
+z pre = -118.286939454474
+  269    0.422    0.228     -115  2.89e-06        0     3.04       405 Inner_Cladding_Fiber Transportation
+z = -115.4060696359985
+z pre = -118.286939454474
+Reflection totale
+  270    0.422    0.228     -115  2.89e-06        0        0       405  Core_Fiber Transportation
+z = -115.4060696359985
+z pre = -115.4060696359985
+  271   -0.423   -0.227     -113  2.89e-06        0     3.04       408 Inner_Cladding_Fiber Transportation
+z = -112.5251998175232
+z pre = -115.4060696359985
+Reflection totale
+  272   -0.423   -0.227     -113  2.89e-06        0        0       408  Core_Fiber Transportation
+z = -112.5251998175232
+z pre = -112.5251998175232
+  273    0.423    0.227     -110  2.89e-06        0     3.04       411 Inner_Cladding_Fiber Transportation
+z = -109.6443299990478
+z pre = -112.5251998175232
+Reflection totale
+  274    0.423    0.227     -110  2.89e-06        0        0       411  Core_Fiber Transportation
+z = -109.6443299990478
+z pre = -109.6443299990478
+  275   -0.423   -0.226     -107  2.89e-06        0     3.04       414 Inner_Cladding_Fiber Transportation
+z = -106.7634601805725
+z pre = -109.6443299990478
+Reflection totale
+  276   -0.423   -0.226     -107  2.89e-06        0        0       414  Core_Fiber Transportation
+z = -106.7634601805725
+z pre = -106.7634601805725
+  277    0.424    0.226     -104  2.89e-06        0     3.04       418 Inner_Cladding_Fiber Transportation
+z = -103.8825903620973
+z pre = -106.7634601805725
+Reflection totale
+  278    0.424    0.226     -104  2.89e-06        0        0       418  Core_Fiber Transportation
+z = -103.8825903620973
+z pre = -103.8825903620973
+  279   -0.424   -0.225     -101  2.89e-06        0     3.04       421 Inner_Cladding_Fiber Transportation
+z = -101.0017205436221
+z pre = -103.8825903620973
+Reflection totale
+  280   -0.424   -0.225     -101  2.89e-06        0        0       421  Core_Fiber Transportation
+z = -101.0017205436221
+z pre = -101.0017205436221
+  281    0.424    0.225    -98.1  2.89e-06        0     3.04       424 Inner_Cladding_Fiber Transportation
+z = -98.12085072514691
+z pre = -101.0017205436221
+Reflection totale
+  282    0.424    0.225    -98.1  2.89e-06        0        0       424  Core_Fiber Transportation
+z = -98.12085072514691
+z pre = -98.12085072514691
+  283   -0.425   -0.224    -95.2  2.89e-06        0     3.04       427 Inner_Cladding_Fiber Transportation
+z = -95.2399809066718
+z pre = -98.12085072514691
+Reflection totale
+  284   -0.425   -0.224    -95.2  2.89e-06        0        0       427  Core_Fiber Transportation
+z = -95.2399809066718
+z pre = -95.2399809066718
+  285    0.425    0.223    -92.4  2.89e-06        0     3.04       430 Inner_Cladding_Fiber Transportation
+z = -92.35911108819674
+z pre = -95.2399809066718
+Reflection totale
+  286    0.425    0.223    -92.4  2.89e-06        0        0       430  Core_Fiber Transportation
+z = -92.35911108819674
+z pre = -92.35911108819674
+  287   -0.425   -0.223    -89.5  2.89e-06        0     3.04       433 Inner_Cladding_Fiber Transportation
+z = -89.47824126972168
+z pre = -92.35911108819674
+Reflection totale
+  288   -0.425   -0.223    -89.5  2.89e-06        0        0       433  Core_Fiber Transportation
+z = -89.47824126972168
+z pre = -89.47824126972168
+  289    0.425    0.222    -86.6  2.89e-06        0     3.04       436 Inner_Cladding_Fiber Transportation
+z = -86.59737145124662
+z pre = -89.47824126972168
+Reflection totale
+  290    0.425    0.222    -86.6  2.89e-06        0        0       436  Core_Fiber Transportation
+z = -86.59737145124662
+z pre = -86.59737145124662
+  291   -0.426   -0.222    -83.7  2.89e-06        0     3.04       439 Inner_Cladding_Fiber Transportation
+z = -83.71650163277158
+z pre = -86.59737145124662
+Reflection totale
+  292   -0.426   -0.222    -83.7  2.89e-06        0        0       439  Core_Fiber Transportation
+z = -83.71650163277158
+z pre = -83.71650163277158
+  293    0.426    0.221    -80.8  2.89e-06        0     3.04       442 Inner_Cladding_Fiber Transportation
+z = -80.83563181429659
+z pre = -83.71650163277158
+Reflection totale
+  294    0.426    0.221    -80.8  2.89e-06        0        0       442  Core_Fiber Transportation
+z = -80.83563181429659
+z pre = -80.83563181429659
+  295   -0.426   -0.221      -78  2.89e-06        0     3.04       445 Inner_Cladding_Fiber Transportation
+z = -77.9547619958216
+z pre = -80.83563181429659
+Reflection totale
+  296   -0.426   -0.221      -78  2.89e-06        0        0       445  Core_Fiber Transportation
+z = -77.9547619958216
+z pre = -77.9547619958216
+  297    0.427     0.22    -75.1  2.89e-06        0     3.04       448 Inner_Cladding_Fiber Transportation
+z = -75.07389217734666
+z pre = -77.9547619958216
+Reflection totale
+  298    0.427     0.22    -75.1  2.89e-06        0        0       448  Core_Fiber Transportation
+z = -75.07389217734666
+z pre = -75.07389217734666
+  299   -0.427    -0.22    -72.2  2.89e-06        0     3.04       451 Inner_Cladding_Fiber Transportation
+z = -72.19302235887179
+z pre = -75.07389217734666
+Reflection totale
+  300   -0.427    -0.22    -72.2  2.89e-06        0        0       451  Core_Fiber Transportation
+z = -72.19302235887179
+z pre = -72.19302235887179
+  301    0.427    0.219    -69.3  2.89e-06        0     3.04       454 Inner_Cladding_Fiber Transportation
+z = -69.31215254039699
+z pre = -72.19302235887179
+Reflection totale
+  302    0.427    0.219    -69.3  2.89e-06        0        0       454  Core_Fiber Transportation
+z = -69.31215254039699
+z pre = -69.31215254039699
+  303   -0.427   -0.218    -66.4  2.89e-06        0     3.04       457 Inner_Cladding_Fiber Transportation
+z = -66.43128272192223
+z pre = -69.31215254039699
+Reflection totale
+  304   -0.427   -0.218    -66.4  2.89e-06        0        0       457  Core_Fiber Transportation
+z = -66.43128272192223
+z pre = -66.43128272192223
+  305    0.428    0.218    -63.6  2.89e-06        0     3.04       460 Inner_Cladding_Fiber Transportation
+z = -63.55041290344749
+z pre = -66.43128272192223
+Reflection totale
+  306    0.428    0.218    -63.6  2.89e-06        0        0       460  Core_Fiber Transportation
+z = -63.55041290344749
+z pre = -63.55041290344749
+  307   -0.428   -0.217    -60.7  2.89e-06        0     3.04       463 Inner_Cladding_Fiber Transportation
+z = -60.66954308497281
+z pre = -63.55041290344749
+Reflection totale
+  308   -0.428   -0.217    -60.7  2.89e-06        0        0       463  Core_Fiber Transportation
+z = -60.66954308497281
+z pre = -60.66954308497281
+  309    0.428    0.217    -57.8  2.89e-06        0     3.04       466 Inner_Cladding_Fiber Transportation
+z = -57.78867326649819
+z pre = -60.66954308497281
+Reflection totale
+  310    0.428    0.217    -57.8  2.89e-06        0        0       466  Core_Fiber Transportation
+z = -57.78867326649819
+z pre = -57.78867326649819
+  311   -0.429   -0.216    -54.9  2.89e-06        0     3.04       469 Inner_Cladding_Fiber Transportation
+z = -54.90780344802358
+z pre = -57.78867326649819
+Reflection totale
+  312   -0.429   -0.216    -54.9  2.89e-06        0        0       469  Core_Fiber Transportation
+z = -54.90780344802358
+z pre = -54.90780344802358
+  313    0.429    0.216      -52  2.89e-06        0     3.04       472 Inner_Cladding_Fiber Transportation
+z = -52.02693362954901
+z pre = -54.90780344802358
+Reflection totale
+  314    0.429    0.216      -52  2.89e-06        0        0       472  Core_Fiber Transportation
+z = -52.02693362954901
+z pre = -52.02693362954901
+  315   -0.429   -0.215    -49.1  2.89e-06        0     3.04       475 Inner_Cladding_Fiber Transportation
+z = -49.14606381107444
+z pre = -52.02693362954901
+Reflection totale
+  316   -0.429   -0.215    -49.1  2.89e-06        0        0       475  Core_Fiber Transportation
+z = -49.14606381107444
+z pre = -49.14606381107444
+  317    0.429    0.214    -46.3  2.89e-06        0     3.04       478 Inner_Cladding_Fiber Transportation
+z = -46.26519399259992
+z pre = -49.14606381107444
+Reflection totale
+  318    0.429    0.214    -46.3  2.89e-06        0        0       478  Core_Fiber Transportation
+z = -46.26519399259992
+z pre = -46.26519399259992
+  319    -0.43   -0.214    -43.4  2.89e-06        0     3.04       481 Inner_Cladding_Fiber Transportation
+z = -43.38432417412548
+z pre = -46.26519399259992
+Reflection totale
+  320    -0.43   -0.214    -43.4  2.89e-06        0        0       481  Core_Fiber Transportation
+z = -43.38432417412548
+z pre = -43.38432417412548
+  321     0.43    0.213    -40.5  2.89e-06        0     3.04       484 Inner_Cladding_Fiber Transportation
+z = -40.50345435565099
+z pre = -43.38432417412548
+Reflection totale
+  322     0.43    0.213    -40.5  2.89e-06        0        0       484  Core_Fiber Transportation
+z = -40.50345435565099
+z pre = -40.50345435565099
+  323    -0.43   -0.213    -37.6  2.89e-06        0     3.04       487 Inner_Cladding_Fiber Transportation
+z = -37.62258453717658
+z pre = -40.50345435565099
+Reflection totale
+  324    -0.43   -0.213    -37.6  2.89e-06        0        0       487  Core_Fiber Transportation
+z = -37.62258453717658
+z pre = -37.62258453717658
+  325    0.431    0.212    -34.7  2.89e-06        0     3.04       490 Inner_Cladding_Fiber Transportation
+z = -34.74171471870214
+z pre = -37.62258453717658
+Reflection totale
+  326    0.431    0.212    -34.7  2.89e-06        0        0       490  Core_Fiber Transportation
+z = -34.74171471870214
+z pre = -34.74171471870214
+  327   -0.431   -0.212    -31.9  2.89e-06        0     3.04       493 Inner_Cladding_Fiber Transportation
+z = -31.86084490022769
+z pre = -34.74171471870214
+Reflection totale
+  328   -0.431   -0.212    -31.9  2.89e-06        0        0       493  Core_Fiber Transportation
+z = -31.86084490022769
+z pre = -31.86084490022769
+  329    0.431    0.211      -29  2.89e-06        0     3.04       496 Inner_Cladding_Fiber Transportation
+z = -28.97997508175326
+z pre = -31.86084490022769
+Reflection totale
+  330    0.431    0.211      -29  2.89e-06        0        0       496  Core_Fiber Transportation
+z = -28.97997508175326
+z pre = -28.97997508175326
+  331   -0.431    -0.21    -26.1  2.89e-06        0     3.04       500 Inner_Cladding_Fiber Transportation
+z = -26.09910526327883
+z pre = -28.97997508175326
+Reflection totale
+  332   -0.431    -0.21    -26.1  2.89e-06        0        0       500  Core_Fiber Transportation
+z = -26.09910526327883
+z pre = -26.09910526327883
+  333    0.432     0.21    -23.2  2.89e-06        0     3.04       503 Inner_Cladding_Fiber Transportation
+z = -23.21823544480442
+z pre = -26.09910526327883
+Reflection totale
+  334    0.432     0.21    -23.2  2.89e-06        0        0       503  Core_Fiber Transportation
+z = -23.21823544480442
+z pre = -23.21823544480442
+  335   -0.432   -0.209    -20.3  2.89e-06        0     3.04       506 Inner_Cladding_Fiber Transportation
+z = -20.33736562633004
+z pre = -23.21823544480442
+Reflection totale
+  336   -0.432   -0.209    -20.3  2.89e-06        0        0       506  Core_Fiber Transportation
+z = -20.33736562633004
+z pre = -20.33736562633004
+  337    0.432    0.209    -17.5  2.89e-06        0     3.04       509 Inner_Cladding_Fiber Transportation
+z = -17.45649580785575
+z pre = -20.33736562633004
+Reflection totale
+  338    0.432    0.209    -17.5  2.89e-06        0        0       509  Core_Fiber Transportation
+z = -17.45649580785575
+z pre = -17.45649580785575
+  339   -0.433   -0.208    -14.6  2.89e-06        0     3.04       512 Inner_Cladding_Fiber Transportation
+z = -14.57562598938155
+z pre = -17.45649580785575
+Reflection totale
+  340   -0.433   -0.208    -14.6  2.89e-06        0        0       512  Core_Fiber Transportation
+z = -14.57562598938155
+z pre = -14.57562598938155
+  341    0.433    0.208    -11.7  2.89e-06        0     3.04       515 Inner_Cladding_Fiber Transportation
+z = -11.69475617090746
+z pre = -14.57562598938155
+Reflection totale
+  342    0.433    0.208    -11.7  2.89e-06        0        0       515  Core_Fiber Transportation
+z = -11.69475617090746
+z pre = -11.69475617090746
+  343   -0.433   -0.207    -8.81  2.89e-06        0     3.04       518 Inner_Cladding_Fiber Transportation
+z = -8.81388635243335
+z pre = -11.69475617090746
+Reflection totale
+  344   -0.433   -0.207    -8.81  2.89e-06        0        0       518  Core_Fiber Transportation
+z = -8.81388635243335
+z pre = -8.81388635243335
+  345    0.433    0.206    -5.93  2.89e-06        0     3.04       521 Inner_Cladding_Fiber Transportation
+z = -5.933016533959311
+z pre = -8.81388635243335
+Reflection totale
+  346    0.433    0.206    -5.93  2.89e-06        0        0       521  Core_Fiber Transportation
+z = -5.933016533959311
+z pre = -5.933016533959311
+  347   -0.434   -0.206    -3.05  2.89e-06        0     3.04       524 Inner_Cladding_Fiber Transportation
+z = -3.052146715485248
+z pre = -5.933016533959311
+Reflection totale
+  348   -0.434   -0.206    -3.05  2.89e-06        0        0       524  Core_Fiber Transportation
+z = -3.052146715485248
+z pre = -3.052146715485248
+  349    0.434    0.205   -0.171  2.89e-06        0     3.04       527 Inner_Cladding_Fiber Transportation
+z = -0.1712768970112144
+z pre = -3.052146715485248
+Reflection totale
+  350    0.434    0.205   -0.171  2.89e-06        0        0       527  Core_Fiber Transportation
+z = -0.1712768970112144
+z pre = -0.1712768970112144
+  351   -0.434   -0.205     2.71  2.89e-06        0     3.04       530 Inner_Cladding_Fiber Transportation
+z = 2.709592921462778
+z pre = -0.1712768970112144
+Reflection totale
+  352   -0.434   -0.205     2.71  2.89e-06        0        0       530  Core_Fiber Transportation
+z = 2.709592921462778
+z pre = 2.709592921462778
+  353    0.434    0.204     5.59  2.89e-06        0     3.04       533 Inner_Cladding_Fiber Transportation
+z = 5.590462739936706
+z pre = 2.709592921462778
+Reflection totale
+  354    0.434    0.204     5.59  2.89e-06        0        0       533  Core_Fiber Transportation
+z = 5.590462739936706
+z pre = 5.590462739936706
+  355   -0.435   -0.203     8.47  2.89e-06        0     3.04       536 Inner_Cladding_Fiber Transportation
+z = 8.471332558410605
+z pre = 5.590462739936706
+Reflection totale
+  356   -0.435   -0.203     8.47  2.89e-06        0        0       536  Core_Fiber Transportation
+z = 8.471332558410605
+z pre = 8.471332558410605
+  357    0.435    0.203     11.4  2.89e-06        0     3.04       539 Inner_Cladding_Fiber Transportation
+z = 11.35220237688453
+z pre = 8.471332558410605
+Reflection totale
+  358    0.435    0.203     11.4  2.89e-06        0        0       539  Core_Fiber Transportation
+z = 11.35220237688453
+z pre = 11.35220237688453
+  359   -0.435   -0.202     14.2  2.89e-06        0     3.04       542 Inner_Cladding_Fiber Transportation
+z = 14.23307219535842
+z pre = 11.35220237688453
+Reflection totale
+  360   -0.435   -0.202     14.2  2.89e-06        0        0       542  Core_Fiber Transportation
+z = 14.23307219535842
+z pre = 14.23307219535842
+  361    0.436    0.202     17.1  2.89e-06        0     3.04       545 Inner_Cladding_Fiber Transportation
+z = 17.11394201383229
+z pre = 14.23307219535842
+Reflection totale
+  362    0.436    0.202     17.1  2.89e-06        0        0       545  Core_Fiber Transportation
+z = 17.11394201383229
+z pre = 17.11394201383229
+  363   -0.436   -0.201       20  2.89e-06        0     3.04       548 Inner_Cladding_Fiber Transportation
+z = 19.99481183230615
+z pre = 17.11394201383229
+Reflection totale
+  364   -0.436   -0.201       20  2.89e-06        0        0       548  Core_Fiber Transportation
+z = 19.99481183230615
+z pre = 19.99481183230615
+  365    0.436    0.201     22.9  2.89e-06        0     3.04       551 Inner_Cladding_Fiber Transportation
+z = 22.87568165077998
+z pre = 19.99481183230615
+Reflection totale
+  366    0.436    0.201     22.9  2.89e-06        0        0       551  Core_Fiber Transportation
+z = 22.87568165077998
+z pre = 22.87568165077998
+  367   -0.436     -0.2     25.8  2.89e-06        0     3.04       554 Inner_Cladding_Fiber Transportation
+z = 25.75655146925378
+z pre = 22.87568165077998
+Reflection totale
+  368   -0.436     -0.2     25.8  2.89e-06        0        0       554  Core_Fiber Transportation
+z = 25.75655146925378
+z pre = 25.75655146925378
+  369    0.437    0.199     28.6  2.89e-06        0     3.04       557 Inner_Cladding_Fiber Transportation
+z = 28.63742128772761
+z pre = 25.75655146925378
+Reflection totale
+  370    0.437    0.199     28.6  2.89e-06        0        0       557  Core_Fiber Transportation
+z = 28.63742128772761
+z pre = 28.63742128772761
+  371   -0.437   -0.199     31.5  2.89e-06        0     3.04       560 Inner_Cladding_Fiber Transportation
+z = 31.51829110620135
+z pre = 28.63742128772761
+Reflection totale
+  372   -0.437   -0.199     31.5  2.89e-06        0        0       560  Core_Fiber Transportation
+z = 31.51829110620135
+z pre = 31.51829110620135
+  373    0.437    0.198     34.4  2.89e-06        0     3.04       563 Inner_Cladding_Fiber Transportation
+z = 34.39916092467508
+z pre = 31.51829110620135
+Reflection totale
+  374    0.437    0.198     34.4  2.89e-06        0        0       563  Core_Fiber Transportation
+z = 34.39916092467508
+z pre = 34.39916092467508
+  375   -0.437   -0.198     37.3  2.89e-06        0     3.04       566 Inner_Cladding_Fiber Transportation
+z = 37.28003074314877
+z pre = 34.39916092467508
+Reflection totale
+  376   -0.437   -0.198     37.3  2.89e-06        0        0       566  Core_Fiber Transportation
+z = 37.28003074314877
+z pre = 37.28003074314877
+  377    0.438    0.197     40.2  2.89e-06        0     3.04       569 Inner_Cladding_Fiber Transportation
+z = 40.16090056162238
+z pre = 37.28003074314877
+Reflection totale
+  378    0.438    0.197     40.2  2.89e-06        0        0       569  Core_Fiber Transportation
+z = 40.16090056162238
+z pre = 40.16090056162238
+  379   -0.438   -0.197       43  2.89e-06        0     3.04       572 Inner_Cladding_Fiber Transportation
+z = 43.04177038009595
+z pre = 40.16090056162238
+Reflection totale
+  380   -0.438   -0.197       43  2.89e-06        0        0       572  Core_Fiber Transportation
+z = 43.04177038009595
+z pre = 43.04177038009595
+  381    0.438    0.196     45.9  2.89e-06        0     3.04       575 Inner_Cladding_Fiber Transportation
+z = 45.9226401985695
+z pre = 43.04177038009595
+Reflection totale
+  382    0.438    0.196     45.9  2.89e-06        0        0       575  Core_Fiber Transportation
+z = 45.9226401985695
+z pre = 45.9226401985695
+  383   -0.438   -0.195     48.8  2.89e-06        0     3.04       578 Inner_Cladding_Fiber Transportation
+z = 48.80351001704303
+z pre = 45.9226401985695
+Reflection totale
+  384   -0.438   -0.195     48.8  2.89e-06        0        0       578  Core_Fiber Transportation
+z = 48.80351001704303
+z pre = 48.80351001704303
+  385    0.439    0.195     51.7  2.89e-06        0     3.04       582 Inner_Cladding_Fiber Transportation
+z = 51.68437983551652
+z pre = 48.80351001704303
+Reflection totale
+  386    0.439    0.195     51.7  2.89e-06        0        0       582  Core_Fiber Transportation
+z = 51.68437983551652
+z pre = 51.68437983551652
+  387   -0.439   -0.194     54.6  2.89e-06        0     3.04       585 Inner_Cladding_Fiber Transportation
+z = 54.56524965399001
+z pre = 51.68437983551652
+Reflection totale
+  388   -0.439   -0.194     54.6  2.89e-06        0        0       585  Core_Fiber Transportation
+z = 54.56524965399001
+z pre = 54.56524965399001
+  389    0.439    0.194     57.4  2.89e-06        0     3.04       588 Inner_Cladding_Fiber Transportation
+z = 57.44611947246342
+z pre = 54.56524965399001
+Reflection totale
+  390    0.439    0.194     57.4  2.89e-06        0        0       588  Core_Fiber Transportation
+z = 57.44611947246342
+z pre = 57.44611947246342
+  391   -0.439   -0.193     60.3  2.89e-06        0     3.04       591 Inner_Cladding_Fiber Transportation
+z = 60.32698929093687
+z pre = 57.44611947246342
+Reflection totale
+  392   -0.439   -0.193     60.3  2.89e-06        0        0       591  Core_Fiber Transportation
+z = 60.32698929093687
+z pre = 60.32698929093687
+  393     0.44    0.192     63.2  2.89e-06        0     3.04       594 Inner_Cladding_Fiber Transportation
+z = 63.20785910941034
+z pre = 60.32698929093687
+Reflection totale
+  394     0.44    0.192     63.2  2.89e-06        0        0       594  Core_Fiber Transportation
+z = 63.20785910941034
+z pre = 63.20785910941034
+  395    -0.44   -0.192     66.1  2.89e-06        0     3.04       597 Inner_Cladding_Fiber Transportation
+z = 66.08872892788379
+z pre = 63.20785910941034
+Reflection totale
+  396    -0.44   -0.192     66.1  2.89e-06        0        0       597  Core_Fiber Transportation
+z = 66.08872892788379
+z pre = 66.08872892788379
+  397     0.44    0.191       69  2.89e-06        0     3.04       600 Inner_Cladding_Fiber Transportation
+z = 68.96959874635719
+z pre = 66.08872892788379
+Reflection totale
+  398     0.44    0.191       69  2.89e-06        0        0       600  Core_Fiber Transportation
+z = 68.96959874635719
+z pre = 68.96959874635719
+  399   -0.441   -0.191     71.9  2.89e-06        0     3.04       603 Inner_Cladding_Fiber Transportation
+z = 71.85046856483056
+z pre = 68.96959874635719
+Reflection totale
+  400   -0.441   -0.191     71.9  2.89e-06        0        0       603  Core_Fiber Transportation
+z = 71.85046856483056
+z pre = 71.85046856483056
+  401    0.441     0.19     74.7  2.89e-06        0     3.04       606 Inner_Cladding_Fiber Transportation
+z = 74.73133838330395
+z pre = 71.85046856483056
+Reflection totale
+  402    0.441     0.19     74.7  2.89e-06        0        0       606  Core_Fiber Transportation
+z = 74.73133838330395
+z pre = 74.73133838330395
+  403   -0.441   -0.189     77.6  2.89e-06        0     3.04       609 Inner_Cladding_Fiber Transportation
+z = 77.61220820177725
+z pre = 74.73133838330395
+Reflection totale
+  404   -0.441   -0.189     77.6  2.89e-06        0        0       609  Core_Fiber Transportation
+z = 77.61220820177725
+z pre = 77.61220820177725
+  405    0.441    0.189     80.5  2.89e-06        0     3.04       612 Inner_Cladding_Fiber Transportation
+z = 80.49307802025045
+z pre = 77.61220820177725
+Reflection totale
+  406    0.441    0.189     80.5  2.89e-06        0        0       612  Core_Fiber Transportation
+z = 80.49307802025045
+z pre = 80.49307802025045
+  407   -0.442   -0.188     83.4  2.89e-06        0     3.04       615 Inner_Cladding_Fiber Transportation
+z = 83.37394783872367
+z pre = 80.49307802025045
+Reflection totale
+  408   -0.442   -0.188     83.4  2.89e-06        0        0       615  Core_Fiber Transportation
+z = 83.37394783872367
+z pre = 83.37394783872367
+  409    0.442    0.188     86.3  2.89e-06        0     3.04       618 Inner_Cladding_Fiber Transportation
+z = 86.25481765719681
+z pre = 83.37394783872367
+Reflection totale
+  410    0.442    0.188     86.3  2.89e-06        0        0       618  Core_Fiber Transportation
+z = 86.25481765719681
+z pre = 86.25481765719681
+  411   -0.442   -0.187     89.1  2.89e-06        0     3.04       621 Inner_Cladding_Fiber Transportation
+z = 89.13568747566993
+z pre = 86.25481765719681
+Reflection totale
+  412   -0.442   -0.187     89.1  2.89e-06        0        0       621  Core_Fiber Transportation
+z = 89.13568747566993
+z pre = 89.13568747566993
+  413    0.442    0.187       92  2.89e-06        0     3.04       624 Inner_Cladding_Fiber Transportation
+z = 92.01655729414298
+z pre = 89.13568747566993
+Reflection totale
+  414    0.442    0.187       92  2.89e-06        0        0       624  Core_Fiber Transportation
+z = 92.01655729414298
+z pre = 92.01655729414298
+  415   -0.443   -0.186     94.9  2.89e-06        0     3.04       627 Inner_Cladding_Fiber Transportation
+z = 94.89742711261599
+z pre = 92.01655729414298
+Reflection totale
+  416   -0.443   -0.186     94.9  2.89e-06        0        0       627  Core_Fiber Transportation
+z = 94.89742711261599
+z pre = 94.89742711261599
+  417    0.443    0.185     97.8  2.89e-06        0     3.04       630 Inner_Cladding_Fiber Transportation
+z = 97.77829693108892
+z pre = 94.89742711261599
+Reflection totale
+  418    0.443    0.185     97.8  2.89e-06        0        0       630  Core_Fiber Transportation
+z = 97.77829693108892
+z pre = 97.77829693108892
+  419   -0.443   -0.185      101  2.89e-06        0     3.04       633 Inner_Cladding_Fiber Transportation
+z = 100.6591667495619
+z pre = 97.77829693108892
+Reflection totale
+  420   -0.443   -0.185      101  2.89e-06        0        0       633  Core_Fiber Transportation
+z = 100.6591667495619
+z pre = 100.6591667495619
+  421    0.443    0.184      104  2.89e-06        0     3.04       636 Inner_Cladding_Fiber Transportation
+z = 103.5400365680347
+z pre = 100.6591667495619
+Reflection totale
+  422    0.443    0.184      104  2.89e-06        0        0       636  Core_Fiber Transportation
+z = 103.5400365680347
+z pre = 103.5400365680347
+  423   -0.443   -0.184      106  2.89e-06        0     3.04       639 Inner_Cladding_Fiber Transportation
+z = 106.4209063865076
+z pre = 103.5400365680347
+Reflection totale
+  424   -0.443   -0.184      106  2.89e-06        0        0       639  Core_Fiber Transportation
+z = 106.4209063865076
+z pre = 106.4209063865076
+  425    0.444    0.183      109  2.89e-06        0     3.04       642 Inner_Cladding_Fiber Transportation
+z = 109.3017762049803
+z pre = 106.4209063865076
+Reflection totale
+  426    0.444    0.183      109  2.89e-06        0        0       642  Core_Fiber Transportation
+z = 109.3017762049803
+z pre = 109.3017762049803
+  427   -0.444   -0.182      112  2.89e-06        0     3.04       645 Inner_Cladding_Fiber Transportation
+z = 112.1826460234531
+z pre = 109.3017762049803
+Reflection totale
+  428   -0.444   -0.182      112  2.89e-06        0        0       645  Core_Fiber Transportation
+z = 112.1826460234531
+z pre = 112.1826460234531
+  429    0.444    0.182      115  2.89e-06        0     3.04       648 Inner_Cladding_Fiber Transportation
+z = 115.0635158419258
+z pre = 112.1826460234531
+Reflection totale
+  430    0.444    0.182      115  2.89e-06        0        0       648  Core_Fiber Transportation
+z = 115.0635158419258
+z pre = 115.0635158419258
+  431   -0.444   -0.181      118  2.89e-06        0     3.04       651 Inner_Cladding_Fiber Transportation
+z = 117.9443856603985
+z pre = 115.0635158419258
+Reflection totale
+  432   -0.444   -0.181      118  2.89e-06        0        0       651  Core_Fiber Transportation
+z = 117.9443856603985
+z pre = 117.9443856603985
+  433    0.445    0.181      121  2.89e-06        0     3.04       654 Inner_Cladding_Fiber Transportation
+z = 120.8252554788712
+z pre = 117.9443856603985
+Reflection totale
+  434    0.445    0.181      121  2.89e-06        0        0       654  Core_Fiber Transportation
+z = 120.8252554788712
+z pre = 120.8252554788712
+  435   -0.445    -0.18      124  2.89e-06        0     3.04       657 Inner_Cladding_Fiber Transportation
+z = 123.7061252973439
+z pre = 120.8252554788712
+Reflection totale
+  436   -0.445    -0.18      124  2.89e-06        0        0       657  Core_Fiber Transportation
+z = 123.7061252973439
+z pre = 123.7061252973439
+  437    0.445    0.179      127  2.89e-06        0     3.04       660 Inner_Cladding_Fiber Transportation
+z = 126.5869951158167
+z pre = 123.7061252973439
+Reflection totale
+  438    0.445    0.179      127  2.89e-06        0        0       660  Core_Fiber Transportation
+z = 126.5869951158167
+z pre = 126.5869951158167
+  439   -0.445   -0.179      129  2.89e-06        0     3.04       663 Inner_Cladding_Fiber Transportation
+z = 129.4678649342894
+z pre = 126.5869951158167
+Reflection totale
+  440   -0.445   -0.179      129  2.89e-06        0        0       663  Core_Fiber Transportation
+z = 129.4678649342894
+z pre = 129.4678649342894
+  441    0.446    0.178      132  2.89e-06        0     3.04       667 Inner_Cladding_Fiber Transportation
+z = 132.348734752762
+z pre = 129.4678649342894
+Reflection totale
+  442    0.446    0.178      132  2.89e-06        0        0       667  Core_Fiber Transportation
+z = 132.348734752762
+z pre = 132.348734752762
+  443   -0.446   -0.178      135  2.89e-06        0     3.04       670 Inner_Cladding_Fiber Transportation
+z = 135.2296045712346
+z pre = 132.348734752762
+Reflection totale
+  444   -0.446   -0.178      135  2.89e-06        0        0       670  Core_Fiber Transportation
+z = 135.2296045712346
+z pre = 135.2296045712346
+  445    0.446    0.177      138  2.89e-06        0     3.04       673 Inner_Cladding_Fiber Transportation
+z = 138.1104743897072
+z pre = 135.2296045712346
+Reflection totale
+  446    0.446    0.177      138  2.89e-06        0        0       673  Core_Fiber Transportation
+z = 138.1104743897072
+z pre = 138.1104743897072
+  447   -0.446   -0.177      141  2.89e-06        0     3.04       676 Inner_Cladding_Fiber Transportation
+z = 140.9913442081797
+z pre = 138.1104743897072
+Reflection totale
+  448   -0.446   -0.177      141  2.89e-06        0        0       676  Core_Fiber Transportation
+z = 140.9913442081797
+z pre = 140.9913442081797
+  449    0.447    0.176      144  2.89e-06        0     3.04       679 Inner_Cladding_Fiber Transportation
+z = 143.8722140266522
+z pre = 140.9913442081797
+Reflection totale
+  450    0.447    0.176      144  2.89e-06        0        0       679  Core_Fiber Transportation
+z = 143.8722140266522
+z pre = 143.8722140266522
+  451   -0.447   -0.175      147  2.89e-06        0     3.04       682 Inner_Cladding_Fiber Transportation
+z = 146.7530838451247
+z pre = 143.8722140266522
+Reflection totale
+  452   -0.447   -0.175      147  2.89e-06        0        0       682  Core_Fiber Transportation
+z = 146.7530838451247
+z pre = 146.7530838451247
+  453    0.447    0.175      150  2.89e-06        0     3.04       685 Inner_Cladding_Fiber Transportation
+z = 149.6339536635971
+z pre = 146.7530838451247
+Reflection totale
+  454    0.447    0.175      150  2.89e-06        0        0       685  Core_Fiber Transportation
+z = 149.6339536635971
+z pre = 149.6339536635971
+  455   -0.447   -0.174      153  2.89e-06        0     3.04       688 Inner_Cladding_Fiber Transportation
+z = 152.5148234820696
+z pre = 149.6339536635971
+Reflection totale
+  456   -0.447   -0.174      153  2.89e-06        0        0       688  Core_Fiber Transportation
+z = 152.5148234820696
+z pre = 152.5148234820696
+  457    0.448    0.174      155  2.89e-06        0     3.04       691 Inner_Cladding_Fiber Transportation
+z = 155.395693300542
+z pre = 152.5148234820696
+Reflection totale
+  458    0.448    0.174      155  2.89e-06        0        0       691  Core_Fiber Transportation
+z = 155.395693300542
+z pre = 155.395693300542
+  459   -0.448   -0.173      158  2.89e-06        0     3.04       694 Inner_Cladding_Fiber Transportation
+z = 158.2765631190145
+z pre = 155.395693300542
+Reflection totale
+  460   -0.448   -0.173      158  2.89e-06        0        0       694  Core_Fiber Transportation
+z = 158.2765631190145
+z pre = 158.2765631190145
+  461    0.448    0.172      161  2.89e-06        0     3.04       697 Inner_Cladding_Fiber Transportation
+z = 161.1574329374869
+z pre = 158.2765631190145
+Reflection totale
+  462    0.448    0.172      161  2.89e-06        0        0       697  Core_Fiber Transportation
+z = 161.1574329374869
+z pre = 161.1574329374869
+  463   -0.448   -0.172      164  2.89e-06        0     3.04       700 Inner_Cladding_Fiber Transportation
+z = 164.0383027559593
+z pre = 161.1574329374869
+Reflection totale
+  464   -0.448   -0.172      164  2.89e-06        0        0       700  Core_Fiber Transportation
+z = 164.0383027559593
+z pre = 164.0383027559593
+  465    0.448    0.171      167  2.89e-06        0     3.04       703 Inner_Cladding_Fiber Transportation
+z = 166.9191725744315
+z pre = 164.0383027559593
+Reflection totale
+  466    0.448    0.171      167  2.89e-06        0        0       703  Core_Fiber Transportation
+z = 166.9191725744315
+z pre = 166.9191725744315
+  467   -0.449   -0.171      170  2.89e-06        0     3.04       706 Inner_Cladding_Fiber Transportation
+z = 169.8000423929038
+z pre = 166.9191725744315
+Reflection totale
+  468   -0.449   -0.171      170  2.89e-06        0        0       706  Core_Fiber Transportation
+z = 169.8000423929038
+z pre = 169.8000423929038
+  469    0.449     0.17      173  2.89e-06        0     3.04       709 Inner_Cladding_Fiber Transportation
+z = 172.680912211376
+z pre = 169.8000423929038
+Reflection totale
+  470    0.449     0.17      173  2.89e-06        0        0       709  Core_Fiber Transportation
+z = 172.680912211376
+z pre = 172.680912211376
+  471   -0.449   -0.169      176  2.89e-06        0     3.04       712 Inner_Cladding_Fiber Transportation
+z = 175.5617820298481
+z pre = 172.680912211376
+Reflection totale
+  472   -0.449   -0.169      176  2.89e-06        0        0       712  Core_Fiber Transportation
+z = 175.5617820298481
+z pre = 175.5617820298481
+  473    0.449    0.169      178  2.89e-06        0     3.04       715 Inner_Cladding_Fiber Transportation
+z = 178.4426518483202
+z pre = 175.5617820298481
+Reflection totale
+  474    0.449    0.169      178  2.89e-06        0        0       715  Core_Fiber Transportation
+z = 178.4426518483202
+z pre = 178.4426518483202
+  475    -0.45   -0.168      181  2.89e-06        0     3.04       718 Inner_Cladding_Fiber Transportation
+z = 181.3235216667923
+z pre = 178.4426518483202
+Reflection totale
+  476    -0.45   -0.168      181  2.89e-06        0        0       718  Core_Fiber Transportation
+z = 181.3235216667923
+z pre = 181.3235216667923
+  477     0.45    0.168      184  2.89e-06        0     3.04       721 Inner_Cladding_Fiber Transportation
+z = 184.2043914852643
+z pre = 181.3235216667923
+Reflection totale
+  478     0.45    0.168      184  2.89e-06        0        0       721  Core_Fiber Transportation
+z = 184.2043914852643
+z pre = 184.2043914852643
+  479    -0.45   -0.167      187  2.89e-06        0     3.04       724 Inner_Cladding_Fiber Transportation
+z = 187.0852613037363
+z pre = 184.2043914852643
+Reflection totale
+  480    -0.45   -0.167      187  2.89e-06        0        0       724  Core_Fiber Transportation
+z = 187.0852613037363
+z pre = 187.0852613037363
+  481     0.45    0.166      190  2.89e-06        0     3.04       727 Inner_Cladding_Fiber Transportation
+z = 189.9661311222083
+z pre = 187.0852613037363
+Reflection totale
+  482     0.45    0.166      190  2.89e-06        0        0       727  Core_Fiber Transportation
+z = 189.9661311222083
+z pre = 189.9661311222083
+  483    -0.45   -0.166      193  2.89e-06        0     3.04       730 Inner_Cladding_Fiber Transportation
+z = 192.8470009406803
+z pre = 189.9661311222083
+Reflection totale
+  484    -0.45   -0.166      193  2.89e-06        0        0       730  Core_Fiber Transportation
+z = 192.8470009406803
+z pre = 192.8470009406803
+  485    0.451    0.165      196  2.89e-06        0     3.04       733 Inner_Cladding_Fiber Transportation
+z = 195.7278707591522
+z pre = 192.8470009406803
+Reflection totale
+  486    0.451    0.165      196  2.89e-06        0        0       733  Core_Fiber Transportation
+z = 195.7278707591522
+z pre = 195.7278707591522
+  487   -0.451   -0.165      199  2.89e-06        0     3.04       736 Inner_Cladding_Fiber Transportation
+z = 198.6087405776241
+z pre = 195.7278707591522
+Reflection totale
+  488   -0.451   -0.165      199  2.89e-06        0        0       736  Core_Fiber Transportation
+z = 198.6087405776241
+z pre = 198.6087405776241
+  489    0.451    0.164      201  2.89e-06        0     3.04       739 Inner_Cladding_Fiber Transportation
+z = 201.489610396096
+z pre = 198.6087405776241
+Reflection totale
+  490    0.451    0.164      201  2.89e-06        0        0       739  Core_Fiber Transportation
+z = 201.489610396096
+z pre = 201.489610396096
+  491   -0.451   -0.163      204  2.89e-06        0     3.04       742 Inner_Cladding_Fiber Transportation
+z = 204.3704802145679
+z pre = 201.489610396096
+Reflection totale
+  492   -0.451   -0.163      204  2.89e-06        0        0       742  Core_Fiber Transportation
+z = 204.3704802145679
+z pre = 204.3704802145679
+  493    0.452    0.163      207  2.89e-06        0     3.04       745 Inner_Cladding_Fiber Transportation
+z = 207.2513500330398
+z pre = 204.3704802145679
+Reflection totale
+  494    0.452    0.163      207  2.89e-06        0        0       745  Core_Fiber Transportation
+z = 207.2513500330398
+z pre = 207.2513500330398
+  495   -0.452   -0.162      210  2.89e-06        0     3.04       749 Inner_Cladding_Fiber Transportation
+z = 210.1322198515117
+z pre = 207.2513500330398
+Reflection totale
+  496   -0.452   -0.162      210  2.89e-06        0        0       749  Core_Fiber Transportation
+z = 210.1322198515117
+z pre = 210.1322198515117
+  497    0.452    0.162      213  2.89e-06        0     3.04       752 Inner_Cladding_Fiber Transportation
+z = 213.0130896699837
+z pre = 210.1322198515117
+Reflection totale
+  498    0.452    0.162      213  2.89e-06        0        0       752  Core_Fiber Transportation
+z = 213.0130896699837
+z pre = 213.0130896699837
+  499   -0.452   -0.161      216  2.89e-06        0     3.04       755 Inner_Cladding_Fiber Transportation
+z = 215.8939594884555
+z pre = 213.0130896699837
+Reflection totale
+  500   -0.452   -0.161      216  2.89e-06        0        0       755  Core_Fiber Transportation
+z = 215.8939594884555
+z pre = 215.8939594884555
+  501    0.452     0.16      219  2.89e-06        0     3.04       758 Inner_Cladding_Fiber Transportation
+z = 218.7748293069273
+z pre = 215.8939594884555
+Reflection totale
+  502    0.452     0.16      219  2.89e-06        0        0       758  Core_Fiber Transportation
+z = 218.7748293069273
+z pre = 218.7748293069273
+  503   -0.453    -0.16      222  2.89e-06        0     3.04       761 Inner_Cladding_Fiber Transportation
+z = 221.6556991253991
+z pre = 218.7748293069273
+Reflection totale
+  504   -0.453    -0.16      222  2.89e-06        0        0       761  Core_Fiber Transportation
+z = 221.6556991253991
+z pre = 221.6556991253991
+  505    0.453    0.159      225  2.89e-06        0     3.04       764 Inner_Cladding_Fiber Transportation
+z = 224.5365689438708
+z pre = 221.6556991253991
+Reflection totale
+  506    0.453    0.159      225  2.89e-06        0        0       764  Core_Fiber Transportation
+z = 224.5365689438708
+z pre = 224.5365689438708
+  507   -0.453   -0.159      227  2.89e-06        0     3.04       767 Inner_Cladding_Fiber Transportation
+z = 227.4174387623426
+z pre = 224.5365689438708
+Reflection totale
+  508   -0.453   -0.159      227  2.89e-06        0        0       767  Core_Fiber Transportation
+z = 227.4174387623426
+z pre = 227.4174387623426
+  509    0.453    0.158      230  2.89e-06        0     3.04       770 Inner_Cladding_Fiber Transportation
+z = 230.2983085808143
+z pre = 227.4174387623426
+Reflection totale
+  510    0.453    0.158      230  2.89e-06        0        0       770  Core_Fiber Transportation
+z = 230.2983085808143
+z pre = 230.2983085808143
+  511   -0.453   -0.157      233  2.89e-06        0     3.04       773 Inner_Cladding_Fiber Transportation
+z = 233.179178399286
+z pre = 230.2983085808143
+Reflection totale
+  512   -0.453   -0.157      233  2.89e-06        0        0       773  Core_Fiber Transportation
+z = 233.179178399286
+z pre = 233.179178399286
+  513    0.454    0.157      236  2.89e-06        0     3.04       776 Inner_Cladding_Fiber Transportation
+z = 236.0600482177576
+z pre = 233.179178399286
+Reflection totale
+  514    0.454    0.157      236  2.89e-06        0        0       776  Core_Fiber Transportation
+z = 236.0600482177576
+z pre = 236.0600482177576
+  515   -0.454   -0.156      239  2.89e-06        0     3.04       779 Inner_Cladding_Fiber Transportation
+z = 238.9409180362293
+z pre = 236.0600482177576
+Reflection totale
+  516   -0.454   -0.156      239  2.89e-06        0        0       779  Core_Fiber Transportation
+z = 238.9409180362293
+z pre = 238.9409180362293
+  517    0.454    0.156      242  2.89e-06        0     3.04       782 Inner_Cladding_Fiber Transportation
+z = 241.8217878547009
+z pre = 238.9409180362293
+Reflection totale
+  518    0.454    0.156      242  2.89e-06        0        0       782  Core_Fiber Transportation
+z = 241.8217878547009
+z pre = 241.8217878547009
+  519   -0.454   -0.155      245  2.89e-06        0     3.04       785 Inner_Cladding_Fiber Transportation
+z = 244.7026576731725
+z pre = 241.8217878547009
+Reflection totale
+  520   -0.454   -0.155      245  2.89e-06        0        0       785  Core_Fiber Transportation
+z = 244.7026576731725
+z pre = 244.7026576731725
+  521    0.455    0.154      248  2.89e-06        0     3.04       788 Inner_Cladding_Fiber Transportation
+z = 247.5835274916441
+z pre = 244.7026576731725
+Reflection totale
+  522    0.455    0.154      248  2.89e-06        0        0       788  Core_Fiber Transportation
+z = 247.5835274916441
+z pre = 247.5835274916441
+  523   -0.455   -0.154      250  2.89e-06        0     3.04       791 Inner_Cladding_Fiber Transportation
+z = 250.4643973101157
+z pre = 247.5835274916441
+Reflection totale
+  524   -0.455   -0.154      250  2.89e-06        0        0       791  Core_Fiber Transportation
+z = 250.4643973101157
+z pre = 250.4643973101157
+  525    0.455    0.153      253  2.89e-06        0     3.04       794 Inner_Cladding_Fiber Transportation
+z = 253.3452671285872
+z pre = 250.4643973101157
+Reflection totale
+  526    0.455    0.153      253  2.89e-06        0        0       794  Core_Fiber Transportation
+z = 253.3452671285872
+z pre = 253.3452671285872
+  527   -0.455   -0.153      256  2.89e-06        0     3.04       797 Inner_Cladding_Fiber Transportation
+z = 256.2261369470587
+z pre = 253.3452671285872
+Reflection totale
+  528   -0.455   -0.153      256  2.89e-06        0        0       797  Core_Fiber Transportation
+z = 256.2261369470587
+z pre = 256.2261369470587
+  529    0.455    0.152      259  2.89e-06        0     3.04       800 Inner_Cladding_Fiber Transportation
+z = 259.1070067655302
+z pre = 256.2261369470587
+Reflection totale
+  530    0.455    0.152      259  2.89e-06        0        0       800  Core_Fiber Transportation
+z = 259.1070067655302
+z pre = 259.1070067655302
+  531   -0.456   -0.151      262  2.89e-06        0     3.04       803 Inner_Cladding_Fiber Transportation
+z = 261.9878765840017
+z pre = 259.1070067655302
+Reflection totale
+  532   -0.456   -0.151      262  2.89e-06        0        0       803  Core_Fiber Transportation
+z = 261.9878765840017
+z pre = 261.9878765840017
+  533    0.456    0.151      265  2.89e-06        0     3.04       806 Inner_Cladding_Fiber Transportation
+z = 264.8687464024732
+z pre = 261.9878765840017
+Reflection totale
+  534    0.456    0.151      265  2.89e-06        0        0       806  Core_Fiber Transportation
+z = 264.8687464024732
+z pre = 264.8687464024732
+  535   -0.456    -0.15      268  2.89e-06        0     3.04       809 Inner_Cladding_Fiber Transportation
+z = 267.7496162209447
+z pre = 264.8687464024732
+Reflection totale
+  536   -0.456    -0.15      268  2.89e-06        0        0       809  Core_Fiber Transportation
+z = 267.7496162209447
+z pre = 267.7496162209447
+  537    0.456     0.15      271  2.89e-06        0     3.04       812 Inner_Cladding_Fiber Transportation
+z = 270.6304860394162
+z pre = 267.7496162209447
+Reflection totale
+  538    0.456     0.15      271  2.89e-06        0        0       812  Core_Fiber Transportation
+z = 270.6304860394162
+z pre = 270.6304860394162
+  539   -0.456   -0.149      274  2.89e-06        0     3.04       815 Inner_Cladding_Fiber Transportation
+z = 273.5113558578876
+z pre = 270.6304860394162
+Reflection totale
+  540   -0.456   -0.149      274  2.89e-06        0        0       815  Core_Fiber Transportation
+z = 273.5113558578876
+z pre = 273.5113558578876
+  541    0.457    0.148      276  2.89e-06        0     3.04       818 Inner_Cladding_Fiber Transportation
+z = 276.392225676359
+z pre = 273.5113558578876
+Reflection totale
+  542    0.457    0.148      276  2.89e-06        0        0       818  Core_Fiber Transportation
+z = 276.392225676359
+z pre = 276.392225676359
+  543   -0.457   -0.148      279  2.89e-06        0     3.04       821 Inner_Cladding_Fiber Transportation
+z = 279.2730954948303
+z pre = 276.392225676359
+Reflection totale
+  544   -0.457   -0.148      279  2.89e-06        0        0       821  Core_Fiber Transportation
+z = 279.2730954948303
+z pre = 279.2730954948303
+  545    0.457    0.147      282  2.89e-06        0     3.04       824 Inner_Cladding_Fiber Transportation
+z = 282.1539653133017
+z pre = 279.2730954948303
+Reflection totale
+  546    0.457    0.147      282  2.89e-06        0        0       824  Core_Fiber Transportation
+z = 282.1539653133017
+z pre = 282.1539653133017
+  547   -0.457   -0.146      285  2.89e-06        0     3.04       827 Inner_Cladding_Fiber Transportation
+z = 285.034835131773
+z pre = 282.1539653133017
+Reflection totale
+  548   -0.457   -0.146      285  2.89e-06        0        0       827  Core_Fiber Transportation
+z = 285.034835131773
+z pre = 285.034835131773
+  549    0.457    0.146      288  2.89e-06        0     3.04       831 Inner_Cladding_Fiber Transportation
+z = 287.9157049502443
+z pre = 285.034835131773
+Reflection totale
+  550    0.457    0.146      288  2.89e-06        0        0       831  Core_Fiber Transportation
+z = 287.9157049502443
+z pre = 287.9157049502443
+  551   -0.457   -0.145      291  2.89e-06        0     3.04       834 Inner_Cladding_Fiber Transportation
+z = 290.7965747687156
+z pre = 287.9157049502443
+Reflection totale
+  552   -0.457   -0.145      291  2.89e-06        0        0       834  Core_Fiber Transportation
+z = 290.7965747687156
+z pre = 290.7965747687156
+  553    0.458    0.145      294  2.89e-06        0     3.04       837 Inner_Cladding_Fiber Transportation
+z = 293.6774445871869
+z pre = 290.7965747687156
+Reflection totale
+  554    0.458    0.145      294  2.89e-06        0        0       837  Core_Fiber Transportation
+z = 293.6774445871869
+z pre = 293.6774445871869
+  555   -0.458   -0.144      297  2.89e-06        0     3.04       840 Inner_Cladding_Fiber Transportation
+z = 296.5583144056581
+z pre = 293.6774445871869
+Reflection totale
+  556   -0.458   -0.144      297  2.89e-06        0        0       840  Core_Fiber Transportation
+z = 296.5583144056581
+z pre = 296.5583144056581
+  557    0.458    0.143      299  2.89e-06        0     3.04       843 Inner_Cladding_Fiber Transportation
+z = 299.4391842241293
+z pre = 296.5583144056581
+Reflection totale
+  558    0.458    0.143      299  2.89e-06        0        0       843  Core_Fiber Transportation
+z = 299.4391842241293
+z pre = 299.4391842241293
+  559   -0.458   -0.143      302  2.89e-06        0     3.04       846 Inner_Cladding_Fiber Transportation
+z = 302.3200540426004
+z pre = 299.4391842241293
+Reflection totale
+  560   -0.458   -0.143      302  2.89e-06        0        0       846  Core_Fiber Transportation
+z = 302.3200540426004
+z pre = 302.3200540426004
+  561    0.458    0.142      305  2.89e-06        0     3.04       849 Inner_Cladding_Fiber Transportation
+z = 305.2009238610715
+z pre = 302.3200540426004
+Reflection totale
+  562    0.458    0.142      305  2.89e-06        0        0       849  Core_Fiber Transportation
+z = 305.2009238610715
+z pre = 305.2009238610715
+  563   -0.459   -0.142      308  2.89e-06        0     3.04       852 Inner_Cladding_Fiber Transportation
+z = 308.0817936795426
+z pre = 305.2009238610715
+Reflection totale
+  564   -0.459   -0.142      308  2.89e-06        0        0       852  Core_Fiber Transportation
+z = 308.0817936795426
+z pre = 308.0817936795426
+  565    0.459    0.141      311  2.89e-06        0     3.04       855 Inner_Cladding_Fiber Transportation
+z = 310.9626634980136
+z pre = 308.0817936795426
+Reflection totale
+  566    0.459    0.141      311  2.89e-06        0        0       855  Core_Fiber Transportation
+z = 310.9626634980136
+z pre = 310.9626634980136
+  567   -0.459    -0.14      314  2.89e-06        0     3.04       858 Inner_Cladding_Fiber Transportation
+z = 313.8435333164846
+z pre = 310.9626634980136
+Reflection totale
+  568   -0.459    -0.14      314  2.89e-06        0        0       858  Core_Fiber Transportation
+z = 313.8435333164846
+z pre = 313.8435333164846
+  569    0.459     0.14      317  2.89e-06        0     3.04       861 Inner_Cladding_Fiber Transportation
+z = 316.7244031349556
+z pre = 313.8435333164846
+Reflection totale
+  570    0.459     0.14      317  2.89e-06        0        0       861  Core_Fiber Transportation
+z = 316.7244031349556
+z pre = 316.7244031349556
+  571   -0.459   -0.139      320  2.89e-06        0     3.04       864 Inner_Cladding_Fiber Transportation
+z = 319.6052729534265
+z pre = 316.7244031349556
+Reflection totale
+  572   -0.459   -0.139      320  2.89e-06        0        0       864  Core_Fiber Transportation
+z = 319.6052729534265
+z pre = 319.6052729534265
+  573     0.46    0.139      322  2.89e-06        0     3.04       867 Inner_Cladding_Fiber Transportation
+z = 322.4861427718975
+z pre = 319.6052729534265
+Reflection totale
+  574     0.46    0.139      322  2.89e-06        0        0       867  Core_Fiber Transportation
+z = 322.4861427718975
+z pre = 322.4861427718975
+  575    -0.46   -0.138      325  2.89e-06        0     3.04       870 Inner_Cladding_Fiber Transportation
+z = 325.3670125903685
+z pre = 322.4861427718975
+Reflection totale
+  576    -0.46   -0.138      325  2.89e-06        0        0       870  Core_Fiber Transportation
+z = 325.3670125903685
+z pre = 325.3670125903685
+  577     0.46    0.137      328  2.89e-06        0     3.04       873 Inner_Cladding_Fiber Transportation
+z = 328.2478824088394
+z pre = 325.3670125903685
+Reflection totale
+  578     0.46    0.137      328  2.89e-06        0        0       873  Core_Fiber Transportation
+z = 328.2478824088394
+z pre = 328.2478824088394
+  579    -0.46   -0.137      331  2.89e-06        0     3.04       876 Inner_Cladding_Fiber Transportation
+z = 331.1287522273103
+z pre = 328.2478824088394
+Reflection totale
+  580    -0.46   -0.137      331  2.89e-06        0        0       876  Core_Fiber Transportation
+z = 331.1287522273103
+z pre = 331.1287522273103
+  581     0.46    0.136      334  2.89e-06        0     3.04       879 Inner_Cladding_Fiber Transportation
+z = 334.0096220457811
+z pre = 331.1287522273103
+Reflection totale
+  582     0.46    0.136      334  2.89e-06        0        0       879  Core_Fiber Transportation
+z = 334.0096220457811
+z pre = 334.0096220457811
+  583    -0.46   -0.135      337  2.89e-06        0     3.04       882 Inner_Cladding_Fiber Transportation
+z = 336.8904918642519
+z pre = 334.0096220457811
+Reflection totale
+  584    -0.46   -0.135      337  2.89e-06        0        0       882  Core_Fiber Transportation
+z = 336.8904918642519
+z pre = 336.8904918642519
+  585    0.461    0.135      340  2.89e-06        0     3.04       885 Inner_Cladding_Fiber Transportation
+z = 339.7713616827226
+z pre = 336.8904918642519
+Reflection totale
+  586    0.461    0.135      340  2.89e-06        0        0       885  Core_Fiber Transportation
+z = 339.7713616827226
+z pre = 339.7713616827226
+  587   -0.461   -0.134      343  2.89e-06        0     3.04       888 Inner_Cladding_Fiber Transportation
+z = 342.6522315011934
+z pre = 339.7713616827226
+Reflection totale
+  588   -0.461   -0.134      343  2.89e-06        0        0       888  Core_Fiber Transportation
+z = 342.6522315011934
+z pre = 342.6522315011934
+  589    0.461    0.134      346  2.89e-06        0     3.04       891 Inner_Cladding_Fiber Transportation
+z = 345.5331013196641
+z pre = 342.6522315011934
+Reflection totale
+  590    0.461    0.134      346  2.89e-06        0        0       891  Core_Fiber Transportation
+z = 345.5331013196641
+z pre = 345.5331013196641
+  591   -0.461   -0.133      348  2.89e-06        0     3.04       894 Inner_Cladding_Fiber Transportation
+z = 348.4139711381347
+z pre = 345.5331013196641
+Reflection totale
+  592   -0.461   -0.133      348  2.89e-06        0        0       894  Core_Fiber Transportation
+z = 348.4139711381347
+z pre = 348.4139711381347
+  593    0.461    0.132      351  2.89e-06        0     3.04       897 Inner_Cladding_Fiber Transportation
+z = 351.2948409566052
+z pre = 348.4139711381347
+Reflection totale
+  594    0.461    0.132      351  2.89e-06        0        0       897  Core_Fiber Transportation
+z = 351.2948409566052
+z pre = 351.2948409566052
+  595   -0.462   -0.132      354  2.89e-06        0     3.04       900 Inner_Cladding_Fiber Transportation
+z = 354.1757107750758
+z pre = 351.2948409566052
+Reflection totale
+  596   -0.462   -0.132      354  2.89e-06        0        0       900  Core_Fiber Transportation
+z = 354.1757107750758
+z pre = 354.1757107750758
+  597    0.462    0.131      357  2.89e-06        0     3.04       903 Inner_Cladding_Fiber Transportation
+z = 357.0565805935464
+z pre = 354.1757107750758
+Reflection totale
+  598    0.462    0.131      357  2.89e-06        0        0       903  Core_Fiber Transportation
+z = 357.0565805935464
+z pre = 357.0565805935464
+  599   -0.462   -0.131      360  2.89e-06        0     3.04       906 Inner_Cladding_Fiber Transportation
+z = 359.9374504120169
+z pre = 357.0565805935464
+Reflection totale
+  600   -0.462   -0.131      360  2.89e-06        0        0       906  Core_Fiber Transportation
+z = 359.9374504120169
+z pre = 359.9374504120169
+  601    0.462     0.13      363  2.89e-06        0     3.04       909 Inner_Cladding_Fiber Transportation
+z = 362.8183202304873
+z pre = 359.9374504120169
+Reflection totale
+  602    0.462     0.13      363  2.89e-06        0        0       909  Core_Fiber Transportation
+z = 362.8183202304873
+z pre = 362.8183202304873
+  603   -0.462   -0.129      366  2.89e-06        0     3.04       913 Inner_Cladding_Fiber Transportation
+z = 365.6991900489577
+z pre = 362.8183202304873
+Reflection totale
+  604   -0.462   -0.129      366  2.89e-06        0        0       913  Core_Fiber Transportation
+z = 365.6991900489577
+z pre = 365.6991900489577
+  605    0.462    0.129      369  2.89e-06        0     3.04       916 Inner_Cladding_Fiber Transportation
+z = 368.5800598674282
+z pre = 365.6991900489577
+Reflection totale
+  606    0.462    0.129      369  2.89e-06        0        0       916  Core_Fiber Transportation
+z = 368.5800598674282
+z pre = 368.5800598674282
+  607   -0.463   -0.128      371  2.89e-06        0     3.04       919 Inner_Cladding_Fiber Transportation
+z = 371.4609296858986
+z pre = 368.5800598674282
+Reflection totale
+  608   -0.463   -0.128      371  2.89e-06        0        0       919  Core_Fiber Transportation
+z = 371.4609296858986
+z pre = 371.4609296858986
+  609    0.463    0.128      374  2.89e-06        0     3.04       922 Inner_Cladding_Fiber Transportation
+z = 374.341799504369
+z pre = 371.4609296858986
+Reflection totale
+  610    0.463    0.128      374  2.89e-06        0        0       922  Core_Fiber Transportation
+z = 374.341799504369
+z pre = 374.341799504369
+  611   -0.463   -0.127      377  2.89e-06        0     3.04       925 Inner_Cladding_Fiber Transportation
+z = 377.2226693228394
+z pre = 374.341799504369
+Reflection totale
+  612   -0.463   -0.127      377  2.89e-06        0        0       925  Core_Fiber Transportation
+z = 377.2226693228394
+z pre = 377.2226693228394
+  613    0.463    0.126      380  2.89e-06        0     3.04       928 Inner_Cladding_Fiber Transportation
+z = 380.1035391413097
+z pre = 377.2226693228394
+Reflection totale
+  614    0.463    0.126      380  2.89e-06        0        0       928  Core_Fiber Transportation
+z = 380.1035391413097
+z pre = 380.1035391413097
+  615   -0.463   -0.126      383  2.89e-06        0     3.04       931 Inner_Cladding_Fiber Transportation
+z = 382.98440895978
+z pre = 380.1035391413097
+Reflection totale
+  616   -0.463   -0.126      383  2.89e-06        0        0       931  Core_Fiber Transportation
+z = 382.98440895978
+z pre = 382.98440895978
+  617    0.463    0.125      386  2.89e-06        0     3.04       934 Inner_Cladding_Fiber Transportation
+z = 385.8652787782503
+z pre = 382.98440895978
+Reflection totale
+  618    0.463    0.125      386  2.89e-06        0        0       934  Core_Fiber Transportation
+z = 385.8652787782503
+z pre = 385.8652787782503
+  619   -0.464   -0.124      389  2.89e-06        0     3.04       937 Inner_Cladding_Fiber Transportation
+z = 388.7461485967206
+z pre = 385.8652787782503
+Reflection totale
+  620   -0.464   -0.124      389  2.89e-06        0        0       937  Core_Fiber Transportation
+z = 388.7461485967206
+z pre = 388.7461485967206
+  621    0.464    0.124      392  2.89e-06        0     3.04       940 Inner_Cladding_Fiber Transportation
+z = 391.6270184151909
+z pre = 388.7461485967206
+Reflection totale
+  622    0.464    0.124      392  2.89e-06        0        0       940  Core_Fiber Transportation
+z = 391.6270184151909
+z pre = 391.6270184151909
+  623   -0.464   -0.123      395  2.89e-06        0     3.04       943 Inner_Cladding_Fiber Transportation
+z = 394.5078882336612
+z pre = 391.6270184151909
+Reflection totale
+  624   -0.464   -0.123      395  2.89e-06        0        0       943  Core_Fiber Transportation
+z = 394.5078882336612
+z pre = 394.5078882336612
+  625    0.464    0.123      397  2.89e-06        0     3.04       946 Inner_Cladding_Fiber Transportation
+z = 397.3887580521314
+z pre = 394.5078882336612
+Reflection totale
+  626    0.464    0.123      397  2.89e-06        0        0       946  Core_Fiber Transportation
+z = 397.3887580521314
+z pre = 397.3887580521314
+  627   -0.464   -0.122      400  2.89e-06        0     3.04       949 Inner_Cladding_Fiber Transportation
+z = 400.2696278706016
+z pre = 397.3887580521314
+Reflection totale
+  628   -0.464   -0.122      400  2.89e-06        0        0       949  Core_Fiber Transportation
+z = 400.2696278706016
+z pre = 400.2696278706016
+  629    0.464    0.121      403  2.89e-06        0     3.04       952 Inner_Cladding_Fiber Transportation
+z = 403.1504976890718
+z pre = 400.2696278706016
+Reflection totale
+  630    0.464    0.121      403  2.89e-06        0        0       952  Core_Fiber Transportation
+z = 403.1504976890718
+z pre = 403.1504976890718
+  631   -0.465   -0.121      406  2.89e-06        0     3.04       955 Inner_Cladding_Fiber Transportation
+z = 406.0313675075419
+z pre = 403.1504976890718
+Reflection totale
+  632   -0.465   -0.121      406  2.89e-06        0        0       955  Core_Fiber Transportation
+z = 406.0313675075419
+z pre = 406.0313675075419
+  633    0.465     0.12      409  2.89e-06        0     3.04       958 Inner_Cladding_Fiber Transportation
+z = 408.9122373260121
+z pre = 406.0313675075419
+Reflection totale
+  634    0.465     0.12      409  2.89e-06        0        0       958  Core_Fiber Transportation
+z = 408.9122373260121
+z pre = 408.9122373260121
+  635   -0.465   -0.119      412  2.89e-06        0     3.04       961 Inner_Cladding_Fiber Transportation
+z = 411.7931071444822
+z pre = 408.9122373260121
+Reflection totale
+  636   -0.465   -0.119      412  2.89e-06        0        0       961  Core_Fiber Transportation
+z = 411.7931071444822
+z pre = 411.7931071444822
+  637    0.465    0.119      415  2.89e-06        0     3.04       964 Inner_Cladding_Fiber Transportation
+z = 414.6739769629524
+z pre = 411.7931071444822
+Reflection totale
+  638    0.465    0.119      415  2.89e-06        0        0       964  Core_Fiber Transportation
+z = 414.6739769629524
+z pre = 414.6739769629524
+  639   -0.465   -0.118      418  2.89e-06        0     3.04       967 Inner_Cladding_Fiber Transportation
+z = 417.5548467814224
+z pre = 414.6739769629524
+Reflection totale
+  640   -0.465   -0.118      418  2.89e-06        0        0       967  Core_Fiber Transportation
+z = 417.5548467814224
+z pre = 417.5548467814224
+  641    0.465    0.118      420  2.89e-06        0     3.04       970 Inner_Cladding_Fiber Transportation
+z = 420.4357165998925
+z pre = 417.5548467814224
+Reflection totale
+  642    0.465    0.118      420  2.89e-06        0        0       970  Core_Fiber Transportation
+z = 420.4357165998925
+z pre = 420.4357165998925
+  643   -0.466   -0.117      423  2.89e-06        0     3.04       973 Inner_Cladding_Fiber Transportation
+z = 423.3165864183625
+z pre = 420.4357165998925
+Reflection totale
+  644   -0.466   -0.117      423  2.89e-06        0        0       973  Core_Fiber Transportation
+z = 423.3165864183625
+z pre = 423.3165864183625
+  645    0.466    0.116      426  2.89e-06        0     3.04       976 Inner_Cladding_Fiber Transportation
+z = 426.1974562368325
+z pre = 423.3165864183625
+Reflection totale
+  646    0.466    0.116      426  2.89e-06        0        0       976  Core_Fiber Transportation
+z = 426.1974562368325
+z pre = 426.1974562368325
+  647   -0.466   -0.116      429  2.89e-06        0     3.04       979 Inner_Cladding_Fiber Transportation
+z = 429.0783260553025
+z pre = 426.1974562368325
+Reflection totale
+  648   -0.466   -0.116      429  2.89e-06        0        0       979  Core_Fiber Transportation
+z = 429.0783260553025
+z pre = 429.0783260553025
+  649    0.466    0.115      432  2.89e-06        0     3.04       982 Inner_Cladding_Fiber Transportation
+z = 431.9591958737724
+z pre = 429.0783260553025
+Reflection totale
+  650    0.466    0.115      432  2.89e-06        0        0       982  Core_Fiber Transportation
+z = 431.9591958737724
+z pre = 431.9591958737724
+  651   -0.466   -0.115      435  2.89e-06        0     3.04       985 Inner_Cladding_Fiber Transportation
+z = 434.8400656922423
+z pre = 431.9591958737724
+Reflection totale
+  652   -0.466   -0.115      435  2.89e-06        0        0       985  Core_Fiber Transportation
+z = 434.8400656922423
+z pre = 434.8400656922423
+  653    0.466    0.114      438  2.89e-06        0     3.04       988 Inner_Cladding_Fiber Transportation
+z = 437.7209355107121
+z pre = 434.8400656922423
+Reflection totale
+  654    0.466    0.114      438  2.89e-06        0        0       988  Core_Fiber Transportation
+z = 437.7209355107121
+z pre = 437.7209355107121
+  655   -0.466   -0.113      441  2.89e-06        0     3.04       991 Inner_Cladding_Fiber Transportation
+z = 440.6018053291819
+z pre = 437.7209355107121
+Reflection totale
+  656   -0.466   -0.113      441  2.89e-06        0        0       991  Core_Fiber Transportation
+z = 440.6018053291819
+z pre = 440.6018053291819
+  657    0.467    0.113      443  2.89e-06        0     3.04       994 Inner_Cladding_Fiber Transportation
+z = 443.4826751476517
+z pre = 440.6018053291819
+Reflection totale
+  658    0.467    0.113      443  2.89e-06        0        0       994  Core_Fiber Transportation
+z = 443.4826751476517
+z pre = 443.4826751476517
+  659   -0.467   -0.112      446  2.89e-06        0     3.04       998 Inner_Cladding_Fiber Transportation
+z = 446.3635449661215
+z pre = 443.4826751476517
+Reflection totale
+  660   -0.467   -0.112      446  2.89e-06        0        0       998  Core_Fiber Transportation
+z = 446.3635449661215
+z pre = 446.3635449661215
+  661    0.467    0.111      449  2.89e-06        0     3.04     1e+03 Inner_Cladding_Fiber Transportation
+z = 449.2444147845912
+z pre = 446.3635449661215
+Reflection totale
+  662    0.467    0.111      449  2.89e-06        0        0     1e+03  Core_Fiber Transportation
+z = 449.2444147845912
+z pre = 449.2444147845912
+  663   -0.467   -0.111      452  2.89e-06        0     3.04     1e+03 Inner_Cladding_Fiber Transportation
+z = 452.1252846030608
+z pre = 449.2444147845912
+Reflection totale
+  664   -0.467   -0.111      452  2.89e-06        0        0     1e+03  Core_Fiber Transportation
+z = 452.1252846030608
+z pre = 452.1252846030608
+  665    0.467     0.11      455  2.89e-06        0     3.04  1.01e+03 Inner_Cladding_Fiber Transportation
+z = 455.0061544215305
+z pre = 452.1252846030608
+Reflection totale
+  666    0.467     0.11      455  2.89e-06        0        0  1.01e+03  Core_Fiber Transportation
+z = 455.0061544215305
+z pre = 455.0061544215305
+  667   -0.467    -0.11      458  2.89e-06        0     3.04  1.01e+03 Inner_Cladding_Fiber Transportation
+z = 457.8870242400001
+z pre = 455.0061544215305
+Reflection totale
+  668   -0.467    -0.11      458  2.89e-06        0        0  1.01e+03  Core_Fiber Transportation
+z = 457.8870242400001
+z pre = 457.8870242400001
+  669    0.467    0.109      461  2.89e-06        0     3.04  1.01e+03 Inner_Cladding_Fiber Transportation
+z = 460.7678940584697
+z pre = 457.8870242400001
+Reflection totale
+  670    0.467    0.109      461  2.89e-06        0        0  1.01e+03  Core_Fiber Transportation
+z = 460.7678940584697
+z pre = 460.7678940584697
+  671   -0.468   -0.108      464  2.89e-06        0     3.04  1.02e+03 Inner_Cladding_Fiber Transportation
+z = 463.6487638769393
+z pre = 460.7678940584697
+Reflection totale
+  672   -0.468   -0.108      464  2.89e-06        0        0  1.02e+03  Core_Fiber Transportation
+z = 463.6487638769393
+z pre = 463.6487638769393
+  673    0.468    0.108      467  2.89e-06        0     3.04  1.02e+03 Inner_Cladding_Fiber Transportation
+z = 466.5296336954088
+z pre = 463.6487638769393
+Reflection totale
+  674    0.468    0.108      467  2.89e-06        0        0  1.02e+03  Core_Fiber Transportation
+z = 466.5296336954088
+z pre = 466.5296336954088
+  675   -0.468   -0.107      469  2.89e-06        0     3.04  1.02e+03 Inner_Cladding_Fiber Transportation
+z = 469.4105035138783
+z pre = 466.5296336954088
+Reflection totale
+  676   -0.468   -0.107      469  2.89e-06        0        0  1.02e+03  Core_Fiber Transportation
+z = 469.4105035138783
+z pre = 469.4105035138783
+  677    0.468    0.106      472  2.89e-06        0     3.04  1.02e+03 Inner_Cladding_Fiber Transportation
+z = 472.2913733323479
+z pre = 469.4105035138783
+Reflection totale
+  678    0.468    0.106      472  2.89e-06        0        0  1.02e+03  Core_Fiber Transportation
+z = 472.2913733323479
+z pre = 472.2913733323479
+  679   -0.468   -0.106      475  2.89e-06        0     3.04  1.03e+03 Inner_Cladding_Fiber Transportation
+z = 475.1722431508173
+z pre = 472.2913733323479
+Reflection totale
+  680   -0.468   -0.106      475  2.89e-06        0        0  1.03e+03  Core_Fiber Transportation
+z = 475.1722431508173
+z pre = 475.1722431508173
+  681    0.468    0.105      478  2.89e-06        0     3.04  1.03e+03 Inner_Cladding_Fiber Transportation
+z = 478.0531129692867
+z pre = 475.1722431508173
+Reflection totale
+  682    0.468    0.105      478  2.89e-06        0        0  1.03e+03  Core_Fiber Transportation
+z = 478.0531129692867
+z pre = 478.0531129692867
+  683   -0.468   -0.105      481  2.89e-06        0     3.04  1.03e+03 Inner_Cladding_Fiber Transportation
+z = 480.9339827877561
+z pre = 478.0531129692867
+Reflection totale
+  684   -0.468   -0.105      481  2.89e-06        0        0  1.03e+03  Core_Fiber Transportation
+z = 480.9339827877561
+z pre = 480.9339827877561
+  685    0.469    0.104      484  2.89e-06        0     3.04  1.04e+03 Inner_Cladding_Fiber Transportation
+z = 483.8148526062255
+z pre = 480.9339827877561
+Reflection totale
+  686    0.469    0.104      484  2.89e-06        0        0  1.04e+03  Core_Fiber Transportation
+z = 483.8148526062255
+z pre = 483.8148526062255
+  687   -0.469   -0.103      487  2.89e-06        0     3.04  1.04e+03 Inner_Cladding_Fiber Transportation
+z = 486.6957224246949
+z pre = 483.8148526062255
+Reflection totale
+  688   -0.469   -0.103      487  2.89e-06        0        0  1.04e+03  Core_Fiber Transportation
+z = 486.6957224246949
+z pre = 486.6957224246949
+  689    0.469    0.103      490  2.89e-06        0     3.04  1.04e+03 Inner_Cladding_Fiber Transportation
+z = 489.5765922431643
+z pre = 486.6957224246949
+Reflection totale
+  690    0.469    0.103      490  2.89e-06        0        0  1.04e+03  Core_Fiber Transportation
+z = 489.5765922431643
+z pre = 489.5765922431643
+  691   -0.469   -0.102      492  2.89e-06        0     3.04  1.05e+03 Inner_Cladding_Fiber Transportation
+z = 492.4574620616336
+z pre = 489.5765922431643
+Reflection totale
+  692   -0.469   -0.102      492  2.89e-06        0        0  1.05e+03  Core_Fiber Transportation
+z = 492.4574620616336
+z pre = 492.4574620616336
+  693    0.469    0.101      495  2.89e-06        0     3.04  1.05e+03 Inner_Cladding_Fiber Transportation
+z = 495.3383318801029
+z pre = 492.4574620616336
+Reflection totale
+  694    0.469    0.101      495  2.89e-06        0        0  1.05e+03  Core_Fiber Transportation
+z = 495.3383318801029
+z pre = 495.3383318801029
+  695   -0.469   -0.101      498  2.89e-06        0     3.04  1.05e+03 Inner_Cladding_Fiber Transportation
+z = 498.2192016985722
+z pre = 495.3383318801029
+Reflection totale
+  696   -0.469   -0.101      498  2.89e-06        0        0  1.05e+03  Core_Fiber Transportation
+z = 498.2192016985722
+z pre = 498.2192016985722
+  697    0.111   0.0234      500  2.89e-06 2.89e-06     1.88  1.05e+03        CMOS Transportation
+z = 500
+z pre = 498.2192016985722
