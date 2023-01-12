@@ -163,3 +163,6 @@
 # - Réarrangement des fonctions dans le fichier FastSimModelOpFiber.cc
 # - Création d'un fichier de géomérie backup
 # - Fonctions permettant de récupérer les trajectoires pour les plotter par la suite ont été commentées pour ne pas créer de fuite mémoire lors de tirs à hautes énergies
+
+
+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
