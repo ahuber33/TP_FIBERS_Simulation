@@ -131,7 +131,7 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   gray_bis->SetForceSolid(true);
   gray_bis->SetVisibility(true);
 
-  black = new G4VisAttributes(G4Colour(0,0,0,0.7));
+  black = new G4VisAttributes(G4Colour(0,0,0,0.2));
   //  black->SetForceWireframe(true);
   black->SetForceSolid(true);
   black->SetVisibility(true);
@@ -241,7 +241,8 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   else  G4Exception("TPSim.cfg",
   "InvalidSetup", FatalException,
   "Fiber multi cladding option not well defined");
-  WidthBunchFibers = FiberNumberPerLine*(FiberWidth) + (FiberNumberPerLine +1)*FiberSpace;
+  WidthXBunchFibers = FiberNumberPerLine*(FiberWidth) + (FiberNumberPerLine +1)*FiberSpace;
+  WidthYBunchFibers = 50*(FiberWidth) + (50 +1)*FiberSpace;
   ActivationG4FAST = theScint->GetActivationG4FAST();
 
   //#########################
@@ -265,7 +266,7 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   LogicalHolder = new G4LogicalVolume(s_holder,Vacuum,"logical_holder",0,0,0); //Replace Air with Vacuum (init)
 
   //G4Box *s_holder;
-  G4Box *s_fibersholder = new G4Box("s_fibersholder", (WidthBunchFibers/2)*mm, (WidthBunchFibers/2)*mm, FiberLength/2);
+  G4Box *s_fibersholder = new G4Box("s_fibersholder", (WidthXBunchFibers/2)*mm, (WidthYBunchFibers/2)*mm, FiberLength/2);
   //G4Tubs *s_fibersholder = new G4Tubs("s_fibersholder", 0.0, 0.6*mm, 50*mm, 0, 360*deg);
 
   LogicalFibersHolder = new G4LogicalVolume(s_fibersholder,Vacuum,"logical_fibersholder",0,0,0); //Replace Air with Vacuum (init)
@@ -280,7 +281,6 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   LogicalMFPlates = theScint->GetMFPlates();
   LogicalVolumeMFPlates = theScint->GetVolumeMFPlates();
   LogicalSc = theScint->GetScTest();
-  LogicalLens = theScint->GetLens();
 
   //  LogicalZnS = theScint->GetZnS();
   if(FiberGeometry ==0)
@@ -305,16 +305,14 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   // Set colors of various block materials
   LogicalPinhole->SetVisAttributes(black);
   LogicalEFPlates->SetVisAttributes(red);
-  LogicalVolumeEFPlates->SetVisAttributes(gray);
+  LogicalVolumeEFPlates->SetVisAttributes(gray_bis);
   LogicalMFPlates->SetVisAttributes(blue);
-  LogicalVolumeMFPlates->SetVisAttributes(gray);
+  LogicalVolumeMFPlates->SetVisAttributes(gray_bis);
   LogicalSc->SetVisAttributes(cyan);
   LogicalCoreFiber->SetVisAttributes(cyan);
   LogicalInnerCladdingFiber->SetVisAttributes(yellow);
-  //LogicalZnS->SetVisAttributes(green);
   LogicalHolder->SetVisAttributes(invis);
   LogicalFibersHolder->SetVisAttributes(orange);
-  LogicalLens->SetVisAttributes(gray);
 
 
   // G4Region* RegEM = new G4Region("EMField");
@@ -424,6 +422,7 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
 
   // Build the PMT glass structure from PMT class
   LogicalPhotocathode = theScint->GetPhotocathode(); // Call function for PMT glass
+  //LogicalPhotocathode = theScint->GetRoundPhotocathode(); // Call function for PMT glass
   LogicalPhotocathode->SetVisAttributes(blue); // Set photocathode color to orange
 
 
@@ -433,7 +432,8 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   std::ifstream ReadPMT;
   //G4String PMTfile = path+"QE_ham_GA0124.txt";
   //G4String PMTfile = path+"9102B_ET_reverse.txt";
-  G4String PMTfile = path+"ORCA_ENL_reverse.cfg";
+  //G4String PMTfile = path+"ORCA_ENL_reverse.cfg";
+  G4String PMTfile = path+"CMOS_S11684_reverse.cfg";
   std::vector<G4double> Photocathode_Energy;
   std::vector<G4double> Photocathode_Value;
   std::vector<G4double> Photocathode_Index;
@@ -481,7 +481,7 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
   G4double fMinStep     = 1*um; // minimal step of 1 mm is default
 
   //G4MagneticField *magField = new G4UniformMagField(G4ThreeVector(0.0*tesla, 0.*tesla, 0.0*tesla));
-  G4MagneticField *localmagField = new G4UniformMagField(G4ThreeVector(0., MF_Value, 0.0));
+  G4MagneticField *localmagField = new G4UniformMagField(G4ThreeVector(0., -MF_Value, 0.0));
   //G4Mag_UsualEqRhs* fEquation = new G4Mag_UsualEqRhs(magField);
   G4Mag_UsualEqRhs* fEquationlocal = new G4Mag_UsualEqRhs(localmagField);
 
@@ -559,14 +559,12 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
       Z_Position_MFPlates = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates/2;
       Z_Position_EFPlates = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates/2;
       Z_Position_ZnS = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness/2;
+      Z_Position_ZnSLG = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ZnSLGThickness/2;
       Z_Position_Sc = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ScintillatorThickness/2;
-      //Z_Position_ZnSLG = Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ScintillatorThickness +ZnSLGThickness/2;
-      Z_Position_Fiber = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + FiberLength/2;
-      Z_Position_Photocathode = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + FiberLength + DetectorThickness/2;
+      Z_Position_Fiber = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ScintillatorThickness + FiberLength/2;
+      Z_Position_Photocathode = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ScintillatorThickness + FiberLength + DetectorThickness/2;
       //Z_Position_Photocathode = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + ZnSThickness + ScintillatorThickness+ZnSLGThickness+DetectorThickness/2;
       //Z_Position_Photocathode = FiberLength/2 + LensTranslation + DetectorTranslation + DetectorThickness/2 ;
-      //Z_Position_Lens = PinholeThickness/2 + Dist_pinhole_MFPlates + MF_Length_plates + Dist_between_plates + EF_Length_plates + Dist_EFPlates_Detector + FiberLength + LensTranslation + LensThickness/2;
-      Z_Position_Lens = FiberLength/2 + LensTranslation - LensThickness/2;
 
 
       //############################
@@ -577,8 +575,8 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
 
       PhysicalHolder = new G4PVPlacement(G4Transform3D(DontRotate,G4ThreeVector(0, 0, 0)),LogicalHolder, "Vacuum", LogicalWorld,false,0);
 
-      //PhysicalFibersHolder = new G4PVPlacement(G4Transform3D(DontRotate,G4ThreeVector(FiberWidth/2 + FiberSpace - WidthBunchFibers/2, 0, Z_Position_Fiber)),LogicalFibersHolder, "Holder_Fiber",LogicalHolder,false,0);//USE THAT FOR TP
-      PhysicalFibersHolder = new G4PVPlacement(G4Transform3D(DontRotate,G4ThreeVector(-21, 5, Z_Position_Fiber)),LogicalFibersHolder, "Holder_Fiber",LogicalHolder,false,0);//USE THAT FOR DEBUG
+      PhysicalFibersHolder = new G4PVPlacement(G4Transform3D(DontRotate,G4ThreeVector(WidthXBunchFibers/2 - FiberWidth/2 - FiberSpace, WidthYBunchFibers/2 - FiberWidth/2 - FiberSpace - 1, Z_Position_Fiber)),LogicalFibersHolder, "Holder_Fiber",LogicalHolder,false,0);//USE THAT FOR TP
+      //PhysicalFibersHolder = new G4PVPlacement(G4Transform3D(DontRotate,G4ThreeVector(0, 0, Z_Position_Fiber)),LogicalFibersHolder, "Holder_Fiber",LogicalHolder,false,0);//USE THAT FOR DEBUG
 
 
       PhysicalPinhole = new G4PVPlacement(G4Transform3D
@@ -587,17 +585,17 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
         LogicalHolder,false,0);
 
         PhysicalVolumeMFPlates = new G4PVPlacement(G4Transform3D
-          (DontRotate,G4ThreeVector(0*mm, translation_pinhole, Z_Position_MFPlates)), // Set at origin as basis of everything else
+          (DontRotate,G4ThreeVector(MF_Width_plates/2-10, -2.45*mm, Z_Position_MFPlates)), // Set at origin as basis of everything else
           LogicalVolumeMFPlates,"Volume_MF_Plates",
           LogicalHolder,false,0);
 
           PhysicalMFPlates = new G4PVPlacement(G4Transform3D
-            (DontRotate,G4ThreeVector(0*mm, 0, 0)), // Set at origin as basis of everything else
+            (DontRotate,G4ThreeVector(0*mm, 0*mm, 0)), // Set at origin as basis of everything else
             LogicalMFPlates,"MF_Plates",
             LogicalVolumeMFPlates,false,0);
 
             PhysicalVolumeEFPlates = new G4PVPlacement(G4Transform3D
-              (DontRotate,G4ThreeVector(0*mm,translation_pinhole, Z_Position_EFPlates)), // Set at origin as basis of everything else
+              (DontRotate,G4ThreeVector(EF_Width_plates/2 - 7*mm, 0.1*mm, Z_Position_EFPlates)), // Set at origin as basis of everything else
               LogicalVolumeEFPlates,"Volume_EF_Plates",
               LogicalHolder,false,0);
 
@@ -607,77 +605,63 @@ G4VPhysicalVolume* TPSimGeometry::Construct( ){
                 LogicalVolumeEFPlates,false,0);
 
 
-      // PhysicalZnS = new G4PVPlacement(G4Transform3D
-      //   (DontRotate,G4ThreeVector(0*mm, translation_pinhole, Z_Position_ZnS)), // Set at origin as basis of everything else
-      //   LogicalZnS,"ZnS",
-      //   LogicalHolder,false,0);
-      //
-      // PhysicalSc = new G4PVPlacement(G4Transform3D
-      //   (DontRotate,G4ThreeVector(0*mm, translation_pinhole, Z_Position_Sc)), // Set at origin as basis of everything else
-      //   LogicalSc,"Scintillator",
-      //   LogicalHolder,false,0);
 
-      // PhysicalZnSLG = new G4PVPlacement(G4Transform3D
-      //   (DontRotate,G4ThreeVector(0*mm, translation_pinhole, Z_Position_ZnSLG)), // Set at origin as basis of everything else
-      //   LogicalZnSLG,"PMMA",
-      //   LogicalHolder,false,0);
-
-      G4int n=0;
-      G4float translation_x=0;
-      G4float translation_y =0;
-
-      for (int i=0; i<FiberNumberPerLine; i++)
-      {
-        for (int j=0; j<FiberNumberPerLine; j++)
-        {
-          translation_x = (FiberSpace+FiberWidth/2-WidthBunchFibers/2)+j*(FiberWidth + FiberSpace);
-          translation_y = (FiberSpace+FiberWidth/2-WidthBunchFibers/2)+i*(FiberWidth + FiberSpace);
-
-          PhysicalCoreFiberBunch[n] = new G4PVPlacement(G4Transform3D
-            (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
-            LogicalCoreFiber,"Core_Fiber",
-            LogicalFibersHolder,false,0);
-
-            PhysicalInnerCladdingFiberBunch[n] = new G4PVPlacement(G4Transform3D
-              (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
-              LogicalInnerCladdingFiber,"Inner_Cladding_Fiber",
-              LogicalFibersHolder,false,0);
-
-              if(FiberMultiCladding  == 1)
-              {
-                PhysicalOuterCladdingFiberBunch[n] = new G4PVPlacement(G4Transform3D
-                  (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
-                  LogicalOuterCladdingFiber,"Outer_Cladding_Fiber",
-                  LogicalFibersHolder,false,0);
-                }
-
-                n++;
-              }
-            }
+                // PhysicalSc = new G4PVPlacement(G4Transform3D
+                //   (DontRotate,G4ThreeVector(25*mm, 4*mm, Z_Position_Sc)), // Set at origin as basis of everything else
+                //   LogicalSc,"Scintillator",
+                //   LogicalHolder,false,0);
 
 
-            // PMT photocathode placement
-            PhysicalPhotocathode = new G4PVPlacement(G4Transform3D
-              //(DontRotate,G4ThreeVector(FiberWidth/2 + FiberSpace - WidthBunchFibers/2, 0, Z_Position_Photocathode)), //USE THAT FOR TP
-              (DontRotate,G4ThreeVector(-21, 5, Z_Position_Photocathode)), //USE THAT FOR DEBUG
-              LogicalPhotocathode,"ORCA",
-              LogicalHolder,true,0);
+                  G4int n=0;
+                  G4float translation_x=0;
+                  G4float translation_y =0;
+
+                  for (int i=0; i<50; i++)
+                  {
+                    for (int j=0; j<FiberNumberPerLine; j++)
+                    {
+                      translation_x = (FiberSpace+FiberWidth/2-WidthXBunchFibers/2)+j*(FiberWidth + FiberSpace);
+                      translation_y = (FiberSpace+FiberWidth/2-WidthYBunchFibers/2)+i*(FiberWidth + FiberSpace);
+
+                      PhysicalCoreFiberBunch[n] = new G4PVPlacement(G4Transform3D
+                        (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
+                        LogicalCoreFiber,"Core_Fiber",
+                        LogicalFibersHolder,false,0);
+
+                        PhysicalInnerCladdingFiberBunch[n] = new G4PVPlacement(G4Transform3D
+                          (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
+                          LogicalInnerCladdingFiber,"Inner_Cladding_Fiber",
+                          LogicalFibersHolder,false,0);
+
+                          if(FiberMultiCladding  == 1)
+                          {
+                            PhysicalOuterCladdingFiberBunch[n] = new G4PVPlacement(G4Transform3D
+                              (DontRotate,G4ThreeVector(translation_x, translation_y, 0)), // Set at origin as basis of everything else
+                              LogicalOuterCladdingFiber,"Outer_Cladding_Fiber",
+                              LogicalFibersHolder,false,0);
+                            }
+
+                            n++;
+                          }
+                        }
 
 
-              // Lens placement
-              // PhysicalLens = new G4PVPlacement(G4Transform3D
-              //   (DontRotate,G4ThreeVector(-37.5, -37.5, Z_Position_Lens)), //USE THAT FOR DEBUG
-              //   LogicalLens,"Lens",
-              //   LogicalHolder,true,0);
+                        // PMT photocathode placement
+                        PhysicalPhotocathode = new G4PVPlacement(G4Transform3D
 
-              #else
+                          (DontRotate,G4ThreeVector(25*mm, 4*mm, Z_Position_Photocathode)), //USE THAT FOR DEBUG
+                          LogicalPhotocathode,"ORCA",
+                          LogicalHolder,true,0);
 
-              #endif
+
+                          #else
+
+                          #endif
 
 
 
 
 
-              // Returns world with everything in it and all properties set
-              return PhysicalWorld;
-            }
+                          // Returns world with everything in it and all properties set
+                          return PhysicalWorld;
+                        }

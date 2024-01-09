@@ -49,6 +49,8 @@ TPSimSteppingAction::TPSimSteppingAction()
   void TPSimSteppingAction::UserSteppingAction(const G4Step *aStep){
 
 
+
+
     //###################################
     // Déclaration of functions/variables
     //###################################
@@ -87,10 +89,10 @@ TPSimSteppingAction::TPSimSteppingAction()
     //##########################START OPTICAL PART###########################
     //#######################################################################
     //#######################################################################
-    // G4cout << "x = " << x << G4endl;
-    // G4cout << "y = " << y << G4endl;
-    // G4cout << "z = " << z << G4endl;
-    // G4cout << "z pre = " << zpre << G4endl;
+    //G4cout << "x = " << x << G4endl;
+    //G4cout << "y = " << y << G4endl;
+    //G4cout << "z = " << z << G4endl;
+    //G4cout << "z pre = " << zpre << G4endl;
     // G4cout << "px = " << px << G4endl;
     // G4cout << "py = " << py << G4endl;
     // G4cout << "pz = " << pz << G4endl;
@@ -140,6 +142,7 @@ TPSimSteppingAction::TPSimSteppingAction()
       evtac->SetPhotonCreationAngle(angle/deg);
       evtac->SetTrackLengthFastSimulated(0);
       //if(angle/deg>20.4 && angle/deg <20.7)G4cout << "HERE" << G4endl;
+      //if (angle/deg >20 && angle/deg <160) theTrack->SetTrackStatus(fStopAndKill);
     }
 
     if(0){                       //set to 1 to ignore generated photons
@@ -181,8 +184,8 @@ TPSimSteppingAction::TPSimSteppingAction()
       // auto iNav = G4TransportationManager::GetTransportationManager()->GetActiveNavigatorsIterator();
       // G4ThreeVector normal = (iNav[hNavId])->GetLocalExitNormal(&valid);
       // float angle_normal = acos(px*normal.x() + py*normal.y() + pz*normal.z())/deg;
-      //G4cout << "Normal Surface = " << normal << G4endl;
-      //G4cout << "angle_normal = " << angle_normal << G4endl;
+      // G4cout << "Normal Surface = " << normal << G4endl;
+      // G4cout << "angle_normal = " << angle_normal << G4endl;
 
       //evtac->AddPhotonTrajectoryNStep();
       //evtac->FillPhotonTrajectoryX(x);
@@ -252,9 +255,12 @@ if(aStep->GetPostStepPoint()->GetStepStatus()==fGeomBoundary){
       evtac->FillPhotonDetectorPositionX(x);
       evtac->FillPhotonDetectorPositionY(y);
       evtac->FillPhotonPositionZ(z);
-      //evtac->FillPhotonMomentumX(px);
-      //evtac->FillPhotonMomentumY(py);
-      //evtac->FillPhotonMomentumZ(pz);
+      evtac->FillPhotonMomentumX(px);
+      evtac->FillPhotonMomentumY(py);
+      evtac->FillPhotonMomentumZ(pz);
+      //G4cout << "Px = " << px << G4endl;
+      //G4cout << "Py = " << py << G4endl;
+      //G4cout << "Pz = " << pz << G4endl;
       evtac->FillBirthLambda(info->GetBirthLambda());
       evtac->FillPhotonTime(aStep->GetPostStepPoint()->GetGlobalTime()/ns);
       evtac->FillEnergype(aStep->GetTotalEnergyDeposit()/eV);
@@ -410,15 +416,15 @@ if(aStep->GetPostStepPoint()->GetStepStatus()==fGeomBoundary){
 
 if (Parent_ID ==0 && StepNo==1)
 {
-  evtac->SetEstartTP(aStep->GetPreStepPoint()->GetKineticEnergy()/keV);
+  evtac->SetEstartTP(aStep->GetPreStepPoint()->GetKineticEnergy()/MeV);
   evtac->SetIncidentE(aStep->GetPreStepPoint()->GetKineticEnergy()/keV);
   evtac->SetParticuleID(partID);
   evtac->SetCharge(aStep->GetPostStepPoint()->GetCharge());
 }
 
 
-if (((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator") || (aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "ZnS"))
-&& ((aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator") || (aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "ZnS"))
+if (((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator") || (aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "ZnS") || (aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "Core_Fiber"))
+&& ((aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator") || (aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "ZnS") || (aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "Core_Fiber"))
 && partname != "opticalphoton")
 {
   evtac->AddTrackLength(aStep->GetTrack()->GetStepLength()/mm);
@@ -426,7 +432,7 @@ if (((aStep->GetPreStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator"
 }
 
 //Be careful here !!! If Zns in here, put ZnS. If not, put Scintillator or Core_Fiber!!!!
-if(Parent_ID ==0 && aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "Core_Fiber" && evtac->GetTPPositionZ()==0)
+if(Parent_ID ==0 && aStep->GetPostStepPoint()->GetPhysicalVolume()->GetName() == "Scintillator" && evtac->GetTPPositionZ()==0)
 {
   evtac->SetTPPositionX(x);
   evtac->SetTPPositionY(y);

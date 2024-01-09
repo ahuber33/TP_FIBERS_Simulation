@@ -165,6 +165,12 @@ void TPSimMaterials::Construct()
 	elementLa = new G4Element ("Lanthane", "Lanthane", 57., 138.90547*g/mole);
 	elementBr = new G4Element ("Brome", "Brome", 35., 79.904*g/mole);
 	elementS = new G4Element ("Soufre", "Soufre", 16., 32.065*g/mole);
+	elementLu = new G4Element ("Lutecium", "Lutecium", 71., 174.967*g/mole);
+	elementY = new G4Element ("Yttrium", "Yttrium", 39., 88.90585*g/mole);
+	elementCs = new G4Element ("Cesium", "Cesium", 55., 132.90545*g/mole);
+	elementI = new G4Element ("Iode", "Iode", 53., 126.90447*g/mole);
+	elementGd = new G4Element ("Gadolinium", "Gadolinium", 64., 157.25*g/mole);
+	elementGa = new G4Element ("Gallium", "Gallium", 31., 69.723*g/mole);
 	// G4Isotope* N14 = new G4Isotope("N14", 7, 14);
 	// elementN = new G4Element("Azote", "Azote", 1);
 	// elementN->AddIsotope(N14, 100.*perCent);
@@ -253,6 +259,63 @@ void TPSimMaterials::Construct()
 	plastic = new G4Material("plastic", 1.3*g/cm3, 2,	kStateSolid, 273.15*kelvin,	1.0*atmosphere );
 	plastic->AddElement( elementH, 0.498 );
 	plastic->AddElement( elementC, 0.502 );
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	PS = new G4Material("PS", 1.05*g/cm3, 2,	kStateSolid, 273.15*kelvin,	1.0*atmosphere );
+	PS->AddElement( elementH, 0.5 );
+	PS->AddElement( elementC, 0.5 );
+
+	std::ifstream Read_PS_ref_index;
+	G4String PS_ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	G4double PS_absorblength;
+	G4double PSIndex;
+	std::vector<G4double> PS_Energy_index;
+	std::vector<G4double> PS_Index_Value;
+	std::vector<G4double> PS_Energy_abs;
+	std::vector<G4double> PS_Absorption_Long;
+	Read_PS_ref_index.open(PS_ref_index_emit);
+	if(Read_PS_ref_index.is_open()){
+		while(!Read_PS_ref_index.eof()){
+			G4String filler;
+			Read_PS_ref_index >> pWavelength >> filler >> PSIndex;
+			PS_Energy_index.push_back((1240/pWavelength)*eV);
+			PS_Index_Value.push_back(PSIndex);
+			//PS_Index_Value.push_back(1.59);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << PS_ref_index_emit << G4endl;
+	Read_PS_ref_index.close();
+
+	std::ifstream Read_PS_Bulk;
+	G4String PS_bulk = path+"PMMABulkAbsorb_reverse.dat";
+
+	//  Read_pmma_Bulk.open(pmma_Bulk);
+	Read_PS_Bulk.open(PS_bulk);
+
+	if(Read_PS_Bulk.is_open()){
+		while(!Read_PS_Bulk.eof()){
+			G4String filler;
+			Read_PS_Bulk >> pWavelength >> filler >> PS_absorblength;
+			PS_Energy_abs.push_back((1240/pWavelength)*eV);
+			PS_Absorption_Long.push_back(PS_absorblength*m);
+			//      G4cout<<pmmaEntries<<" "<<pmmaEnergy[pmmaEntries]<<" "<<cladIndex1[pmmaEntries]<<G4endl;
+
+		}
+	}
+	else
+	//    G4cout << "Error opening file: " << Bulk << G4endl;
+	G4cout << "Error opening file: " << "PSBulkAbsorb.dat" << G4endl;
+
+	Read_PS_Bulk.close();
+
+	//PS
+	PSMPT = new G4MaterialPropertiesTable();
+	PSMPT->AddProperty("ABSLENGTH", PS_Energy_abs, PS_Absorption_Long);
+	PSMPT->AddProperty("RINDEX", PS_Energy_index, PS_Index_Value);
+	PS->SetMaterialPropertiesTable(PSMPT);
 
 	//#######################################################################################################################################
 	//#######################################################################################################################################
@@ -346,53 +409,51 @@ void TPSimMaterials::Construct()
 	//#######################################################################################################################################
 	//#######################################################################################################################################
 
-	scintillator = new G4Material("scintillator",
+	EJ212 = new G4Material("EJ212",
 	1.032*g/cm3, //1.053
 	2,
 	kStateSolid,
 	273.15*kelvin,
 	1.0*atmosphere );
 
-	scintMPT = new G4MaterialPropertiesTable();
+	EJ212MPT = new G4MaterialPropertiesTable();
 
-	scintillator->AddElement( elementH, 10);
-	//scintillator->AddElement( elementH, 0.5 );
-	scintillator->AddElement( elementC, 9);
-	//scintillator->AddElement( elementC, 0.5 );
+	EJ212->AddElement( elementH, 10);
+	EJ212->AddElement( elementC, 9);
 
 	G4double varabsorblength;
 	G4double indexvalue;
 
 	// Read primary emission spectrum
 
-	std::ifstream ReadScint;
+	std::ifstream ReadEJ212;
 
-	G4String Scint_file = path+"EJ-212.cfg";
-	std::vector<G4double> Sc_Emission_Energy;
-	std::vector<G4double> Sc_Emission_Ratio;
+	G4String EJ212_file = path+"EJ-212.cfg";
+	std::vector<G4double> EJ212_Emission_Energy;
+	std::vector<G4double> EJ212_Emission_Ratio;
 
-	ReadScint.open(Scint_file);
-	if(ReadScint.is_open()){
-		while(!ReadScint.eof()){
+	ReadEJ212.open(EJ212_file);
+	if(ReadEJ212.is_open()){
+		while(!ReadEJ212.eof()){
 			G4String filler;
-			ReadScint >> pWavelength >> filler >> ratio;
+			ReadEJ212 >> pWavelength >> filler >> ratio;
 			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
-			Sc_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
-			Sc_Emission_Ratio.push_back(ratio);
+			EJ212_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			EJ212_Emission_Ratio.push_back(ratio);
 		}
 	}
 	else
 	{
-		G4cout << "Error opening file: " << Scint_file << G4endl;
+		G4cout << "Error opening file: " << EJ212_file << G4endl;
 	}
-	ReadScint.close();
+	ReadEJ212.close();
 
 	// // Read primary bulk absorption
 
 	std::ifstream Readabsorb;
 	G4String Readabsorblength = path+"PSTBulkAbsorb_reverse.cfg";
-	std::vector<G4double> Sc_Absorption_Energy;
-	std::vector<G4double> Sc_Absorption_Long;
+	std::vector<G4double> EJ212_Absorption_Energy;
+	std::vector<G4double> EJ212_Absorption_Long;
 
 	Readabsorb.open(Readabsorblength);
 	if (Readabsorb.is_open()){
@@ -400,8 +461,8 @@ void TPSimMaterials::Construct()
 			G4String filler;
 			Readabsorb >> pWavelength >> filler >> varabsorblength;
 			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
-			Sc_Absorption_Energy.push_back((1240./pWavelength)*eV);
-			Sc_Absorption_Long.push_back(1.*varabsorblength*m);
+			EJ212_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			EJ212_Absorption_Long.push_back(1.*varabsorblength*m);
 		}
 	}
 	else
@@ -465,8 +526,8 @@ void TPSimMaterials::Construct()
 	std::ifstream Read_ref_index;
 	//G4String ref_index_emit = path+"PST_ref_index.dat";
 	G4String ref_index_emit = path+"PS_index_geant_reverse.cfg";
-	std::vector<G4double> Sc_Index_Energy;
-	std::vector<G4double> Sc_Index_Value;
+	std::vector<G4double> EJ212_Index_Energy;
+	std::vector<G4double> EJ212_Index_Value;
 
 	Read_ref_index.open(ref_index_emit);
 	if(Read_ref_index.is_open()){
@@ -474,9 +535,9 @@ void TPSimMaterials::Construct()
 			G4String filler;
 			Read_ref_index >> pWavelength >> filler >> indexvalue;
 			//ref_index_value[ref_index_Entries]=1.59;
-			Sc_Index_Energy.push_back((1240/pWavelength)*eV);
-			//Sc_Index_Value.push_back(indexvalue);
-			Sc_Index_Value.push_back(1.59);
+			EJ212_Index_Energy.push_back((1240/pWavelength)*eV);
+			EJ212_Index_Value.push_back(indexvalue);
+			//EJ212_Index_Value.push_back(1.59);
 		}
 	}
 	else
@@ -489,10 +550,10 @@ void TPSimMaterials::Construct()
 	// scintMPT->AddProperty("WLSCOMPONENT",wlsEnergy,wlsEmit,wlsEmEntries);
 	// scintMPT->AddProperty("WLSABSLENGTH",wlsEnergy,wlsAbsorb,wlsAbEntries);   // the WLS absorption spectrum
 	// scintMPT->AddConstProperty("WLSTIMECONSTANT",12*ns);
-	scintMPT->AddProperty("RINDEX",Sc_Index_Energy, Sc_Index_Value);
+	EJ212MPT->AddProperty("RINDEX",EJ212_Index_Energy, EJ212_Index_Value);
 
-	scintMPT->AddProperty("ABSLENGTH", Sc_Absorption_Energy, Sc_Absorption_Long);    // the bulk absorption spectrum
-	scintMPT->AddProperty("SCINTILLATIONCOMPONENT1", Sc_Emission_Energy, Sc_Emission_Ratio);
+	EJ212MPT->AddProperty("ABSLENGTH", EJ212_Absorption_Energy, EJ212_Absorption_Long);    // the bulk absorption spectrum
+	EJ212MPT->AddProperty("SCINTILLATIONCOMPONENT1", EJ212_Emission_Energy, EJ212_Emission_Ratio);
 	//scintMPT->AddProperty("SCINTILLATIONCOMPONENT1",scintEnergy,scintEmit,scintEntries);
 	//scintMPT->AddProperty("SCINTILLATIONCOMPONENT2",scintEnergy,scintEmit,scintEntries);  // if slow component
 
@@ -500,22 +561,854 @@ void TPSimMaterials::Construct()
 	//G4double efficiency = 1.0;
 	//scintMPT->AddConstProperty("EFFICIENCY",efficiency);
 
-	scintMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	EJ212MPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
 	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
-	G4double scintRes = 1;
-	scintMPT->AddConstProperty("RESOLUTIONSCALE",scintRes);
-	G4double scintFastconst = 2.1*ns;
-	scintMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",scintFastconst);
-	G4double scintSlowconst = 10*ns;
-	scintMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2",scintSlowconst); //if slow component
-	scintMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
-	scintMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+	G4double EJ212Res = 1;
+	EJ212MPT->AddConstProperty("RESOLUTIONSCALE",EJ212Res);
+	G4double EJ212Fastconst = 2.1*ns;
+	EJ212MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",EJ212Fastconst);
+	G4double EJ212Slowconst = 10*ns;
+	EJ212MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2",EJ212Slowconst); //if slow component
+	EJ212MPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	EJ212MPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
 
-	scintillator->SetMaterialPropertiesTable(scintMPT);
+	EJ212->SetMaterialPropertiesTable(EJ212MPT);
 	//scintillator->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
 	//scintillator->GetIonisation()->SetBirksConstant(0.25*mm/MeV); // Choisi pour validation modÃ¨le avec LY 11737!!!
 	//scintillator->GetIonisation()->SetBirksConstant(0.22*mm/MeV);
 	//scintillator->GetIonisation()->SetBirksConstant(0.01*mm/MeV); // TEST ELECTRONS !!! => Maxime
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	EJ214 = new G4Material("EJ214",
+	1.02*g/cm3, //1.053
+	4,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	EJ214MPT = new G4MaterialPropertiesTable();
+
+	EJ214->AddElement( elementH, 0.2989);
+	EJ214->AddElement( elementC, 0.2695);
+	EJ214->AddElement( elementN, 0.2821);
+	EJ214->AddElement( elementO, 0.1495);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadEJ214;
+
+	G4String EJ214_file = path+"EJ-214.cfg";
+	std::vector<G4double> EJ214_Emission_Energy;
+	std::vector<G4double> EJ214_Emission_Ratio;
+
+	ReadEJ214.open(EJ214_file);
+	if(ReadEJ214.is_open()){
+		while(!ReadEJ214.eof()){
+			G4String filler;
+			ReadEJ214 >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			EJ214_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			EJ214_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << EJ214_file << G4endl;
+	}
+	ReadEJ214.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"PSTBulkAbsorb_reverse.cfg";
+	std::vector<G4double> EJ214_Absorption_Energy;
+	std::vector<G4double> EJ214_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			EJ214_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			EJ214_Absorption_Long.push_back(1.*varabsorblength*m);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> EJ214_Index_Energy;
+	std::vector<G4double> EJ214_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			EJ214_Index_Energy.push_back((1240/pWavelength)*eV);
+			EJ214_Index_Value.push_back(indexvalue);
+			//EJ214_Index_Value.push_back(1.59);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	EJ214MPT->AddProperty("RINDEX", EJ214_Index_Energy, EJ214_Index_Value);
+	EJ214MPT->AddProperty("ABSLENGTH", EJ214_Absorption_Energy, EJ214_Absorption_Long);    // the bulk absorption spectrum
+	EJ214MPT->AddProperty("SCINTILLATIONCOMPONENT1", EJ214_Emission_Energy, EJ214_Emission_Ratio);
+
+	EJ214MPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double EJ214Res = 1;
+	EJ214MPT->AddConstProperty("RESOLUTIONSCALE", EJ214Res);
+	G4double EJ214Fastconst = 2*ns;
+	EJ214MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",EJ214Fastconst);
+	G4double EJ214Slowconst = 10*ns;
+	EJ214MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", EJ214Slowconst); //if slow component
+	EJ214MPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	EJ214MPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	EJ214->SetMaterialPropertiesTable(EJ214MPT);
+	//EJ214->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	EJ260 = new G4Material("EJ260",
+	1.023*g/cm3, //1.053
+	2,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	EJ260MPT = new G4MaterialPropertiesTable();
+
+	EJ260->AddElement( elementH, 0.5257);
+	EJ260->AddElement( elementC, 0.4743);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadEJ260;
+
+	G4String EJ260_file = path+"EJ-260.cfg";
+	std::vector<G4double> EJ260_Emission_Energy;
+	std::vector<G4double> EJ260_Emission_Ratio;
+
+	ReadEJ260.open(EJ260_file);
+	if(ReadEJ260.is_open()){
+		while(!ReadEJ260.eof()){
+			G4String filler;
+			ReadEJ260 >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			EJ260_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			EJ260_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << EJ260_file << G4endl;
+	}
+	ReadEJ260.close();
+
+	// // Read primary bulk absorption
+
+	Readabsorblength = path+"PSTBulkAbsorb_reverse.cfg";
+	std::vector<G4double> EJ260_Absorption_Energy;
+	std::vector<G4double> EJ260_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			EJ260_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			EJ260_Absorption_Long.push_back(3.5*m);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> EJ260_Index_Energy;
+	std::vector<G4double> EJ260_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			EJ260_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			EJ260_Index_Value.push_back(1.58);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	EJ260MPT->AddProperty("RINDEX", EJ260_Index_Energy, EJ260_Index_Value);
+	EJ260MPT->AddProperty("ABSLENGTH", EJ260_Absorption_Energy, EJ260_Absorption_Long);    // the bulk absorption spectrum
+	EJ260MPT->AddProperty("SCINTILLATIONCOMPONENT1", EJ260_Emission_Energy, EJ260_Emission_Ratio);
+
+	EJ260MPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double EJ260Res = 1;
+	EJ260MPT->AddConstProperty("RESOLUTIONSCALE", EJ260Res);
+	G4double EJ260Fastconst = 2*ns;
+	EJ260MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",EJ260Fastconst);
+	G4double EJ260Slowconst = 10*ns;
+	EJ260MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", EJ260Slowconst); //if slow component
+	EJ260MPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	EJ260MPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	EJ260->SetMaterialPropertiesTable(EJ260MPT);
+	//EJ260->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	EJ262 = new G4Material("EJ262",
+	1.023*g/cm3, //1.053
+	2,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	EJ262MPT = new G4MaterialPropertiesTable();
+
+	EJ262->AddElement( elementH, 0.5257);
+	EJ262->AddElement( elementC, 0.4743);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadEJ262;
+
+	G4String EJ262_file = path+"EJ-262.cfg";
+	std::vector<G4double> EJ262_Emission_Energy;
+	std::vector<G4double> EJ262_Emission_Ratio;
+
+	ReadEJ262.open(EJ262_file);
+	if(ReadEJ262.is_open()){
+		while(!ReadEJ262.eof()){
+			G4String filler;
+			ReadEJ262 >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			EJ262_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			EJ262_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << EJ262_file << G4endl;
+	}
+	ReadEJ262.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"PSTBulkAbsorb_reverse.cfg";
+	std::vector<G4double> EJ262_Absorption_Energy;
+	std::vector<G4double> EJ262_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			EJ262_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			EJ262_Absorption_Long.push_back(2.5*m);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> EJ262_Index_Energy;
+	std::vector<G4double> EJ262_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			EJ262_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			EJ262_Index_Value.push_back(1.58);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	EJ262MPT->AddProperty("RINDEX", EJ262_Index_Energy, EJ262_Index_Value);
+	EJ262MPT->AddProperty("ABSLENGTH", EJ262_Absorption_Energy, EJ262_Absorption_Long);    // the bulk absorption spectrum
+	EJ262MPT->AddProperty("SCINTILLATIONCOMPONENT1", EJ262_Emission_Energy, EJ262_Emission_Ratio);
+
+	EJ262MPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double EJ262Res = 1;
+	EJ262MPT->AddConstProperty("RESOLUTIONSCALE", EJ262Res);
+	G4double EJ262Fastconst = 2*ns;
+	EJ262MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",EJ262Fastconst);
+	G4double EJ262Slowconst = 10*ns;
+	EJ262MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", EJ262Slowconst); //if slow component
+	EJ262MPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	EJ262MPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	EJ262->SetMaterialPropertiesTable(EJ262MPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	LYSO = new G4Material("LYSO",
+	7.1*g/cm3, //1.053
+	4,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	LYSOMPT = new G4MaterialPropertiesTable();
+
+	LYSO->AddElement( elementLu, 0.225);
+	LYSO->AddElement( elementY, 0.025);
+	LYSO->AddElement( elementSi, 0.125);
+	LYSO->AddElement( elementO, 0.625);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadLYSO;
+
+	G4String LYSO_file = path+"LYSO_reverse.cfg";
+	std::vector<G4double> LYSO_Emission_Energy;
+	std::vector<G4double> LYSO_Emission_Ratio;
+
+	ReadLYSO.open(LYSO_file);
+	if(ReadLYSO.is_open()){
+		while(!ReadLYSO.eof()){
+			G4String filler;
+			ReadLYSO >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			LYSO_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			LYSO_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << LYSO_file << G4endl;
+	}
+	ReadLYSO.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"PSTBulkAbsorb_reverse.cfg";
+	std::vector<G4double> LYSO_Absorption_Energy;
+	std::vector<G4double> LYSO_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			LYSO_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			LYSO_Absorption_Long.push_back(40*cm);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> LYSO_Index_Energy;
+	std::vector<G4double> LYSO_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			LYSO_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			LYSO_Index_Value.push_back(1.81);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	LYSOMPT->AddProperty("RINDEX", LYSO_Index_Energy, LYSO_Index_Value);
+	LYSOMPT->AddProperty("ABSLENGTH", LYSO_Absorption_Energy, LYSO_Absorption_Long);    // the bulk absorption spectrum
+	LYSOMPT->AddProperty("SCINTILLATIONCOMPONENT1", LYSO_Emission_Energy, LYSO_Emission_Ratio);
+
+	LYSOMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double LYSORes = 1;
+	LYSOMPT->AddConstProperty("RESOLUTIONSCALE", LYSORes);
+	G4double LYSOFastconst = 36*ns;
+	LYSOMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",LYSOFastconst);
+	G4double LYSOSlowconst = 100*ns;
+	LYSOMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", LYSOSlowconst); //if slow component
+	LYSOMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	LYSOMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	LYSO->SetMaterialPropertiesTable(LYSOMPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	CsITl = new G4Material("CsITl",
+	4.51*g/cm3, //1.053
+	2,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	CsITlMPT = new G4MaterialPropertiesTable();
+
+	CsITl->AddElement( elementCs, 1);
+	CsITl->AddElement( elementI, 1);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadCsITl;
+
+	G4String CsITl_file = path+"CsITl_reverse.cfg";
+	std::vector<G4double> CsITl_Emission_Energy;
+	std::vector<G4double> CsITl_Emission_Ratio;
+
+	ReadCsITl.open(CsITl_file);
+	if(ReadCsITl.is_open()){
+		while(!ReadCsITl.eof()){
+			G4String filler;
+			ReadCsITl >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			CsITl_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			CsITl_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << CsITl_file << G4endl;
+	}
+	ReadCsITl.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"CsITlAbsorb_reverse.dat";
+	std::vector<G4double> CsITl_Absorption_Energy;
+	std::vector<G4double> CsITl_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			CsITl_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			CsITl_Absorption_Long.push_back(varabsorblength*cm);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> CsITl_Index_Energy;
+	std::vector<G4double> CsITl_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			CsITl_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			CsITl_Index_Value.push_back(1.79);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	CsITlMPT->AddProperty("RINDEX", CsITl_Index_Energy, CsITl_Index_Value);
+	CsITlMPT->AddProperty("ABSLENGTH", CsITl_Absorption_Energy, CsITl_Absorption_Long);    // the bulk absorption spectrum
+	CsITlMPT->AddProperty("SCINTILLATIONCOMPONENT1", CsITl_Emission_Energy, CsITl_Emission_Ratio);
+
+	CsITlMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double CsITlRes = 1;
+	CsITlMPT->AddConstProperty("RESOLUTIONSCALE", CsITlRes);
+	G4double CsITlFastconst = 1000*ns;
+	CsITlMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",CsITlFastconst);
+	G4double CsITlSlowconst = 2000*ns;
+	CsITlMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", CsITlSlowconst); //if slow component
+	CsITlMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	CsITlMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	CsITl->SetMaterialPropertiesTable(CsITlMPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	LuAG = new G4Material("LuAG",
+	6.73*g/cm3, //1.053
+	3,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	LuAGMPT = new G4MaterialPropertiesTable();
+
+	LuAG->AddElement( elementLu, 1);
+	LuAG->AddElement( elementAl, 5);
+	LuAG->AddElement( elementO, 12);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadLuAG;
+
+	G4String LuAG_file = path+"LuAG_reverse.cfg";
+	std::vector<G4double> LuAG_Emission_Energy;
+	std::vector<G4double> LuAG_Emission_Ratio;
+
+	ReadLuAG.open(LuAG_file);
+	if(ReadLuAG.is_open()){
+		while(!ReadLuAG.eof()){
+			G4String filler;
+			ReadLuAG >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			LuAG_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			LuAG_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << LuAG_file << G4endl;
+	}
+	ReadLuAG.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"LuAGAbsorb_reverse.dat";
+	std::vector<G4double> LuAG_Absorption_Energy;
+	std::vector<G4double> LuAG_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			LuAG_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			LuAG_Absorption_Long.push_back(varabsorblength*m);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> LuAG_Index_Energy;
+	std::vector<G4double> LuAG_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			LuAG_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			LuAG_Index_Value.push_back(1.84);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	LuAGMPT->AddProperty("RINDEX", LuAG_Index_Energy, LuAG_Index_Value);
+	LuAGMPT->AddProperty("ABSLENGTH", LuAG_Absorption_Energy, LuAG_Absorption_Long);    // the bulk absorption spectrum
+	LuAGMPT->AddProperty("SCINTILLATIONCOMPONENT1", LuAG_Emission_Energy, LuAG_Emission_Ratio);
+
+	LuAGMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double LuAGRes = 1;
+	LuAGMPT->AddConstProperty("RESOLUTIONSCALE", LuAGRes);
+	G4double LuAGFastconst = 70*ns;
+	LuAGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",LuAGFastconst);
+	G4double LuAGSlowconst = 100*ns;
+	LuAGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", LuAGSlowconst); //if slow component
+	LuAGMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	LuAGMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	LuAG->SetMaterialPropertiesTable(LuAGMPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	YAG = new G4Material("YAG",
+	4.57*g/cm3, //1.053
+	3,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	YAGMPT = new G4MaterialPropertiesTable();
+
+	YAG->AddElement( elementY, 3);
+	YAG->AddElement( elementAl, 5);
+	YAG->AddElement( elementO, 12);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadYAG;
+
+	G4String YAG_file = path+"YAG_reverse.cfg";
+	std::vector<G4double> YAG_Emission_Energy;
+	std::vector<G4double> YAG_Emission_Ratio;
+
+	ReadYAG.open(YAG_file);
+	if(ReadYAG.is_open()){
+		while(!ReadYAG.eof()){
+			G4String filler;
+			ReadYAG >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			YAG_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			YAG_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << YAG_file << G4endl;
+	}
+	ReadYAG.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"YAGAbsorb_reverse.dat";
+	std::vector<G4double> YAG_Absorption_Energy;
+	std::vector<G4double> YAG_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			YAG_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			YAG_Absorption_Long.push_back(varabsorblength*m);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> YAG_Index_Energy;
+	std::vector<G4double> YAG_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			YAG_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			YAG_Index_Value.push_back(1.82);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	YAGMPT->AddProperty("RINDEX", YAG_Index_Energy, YAG_Index_Value);
+	YAGMPT->AddProperty("ABSLENGTH", YAG_Absorption_Energy, YAG_Absorption_Long);    // the bulk absorption spectrum
+	YAGMPT->AddProperty("SCINTILLATIONCOMPONENT1", YAG_Emission_Energy, YAG_Emission_Ratio);
+
+	YAGMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double YAGRes = 1;
+	YAGMPT->AddConstProperty("RESOLUTIONSCALE", YAGRes);
+	G4double YAGFastconst = 70*ns;
+	YAGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",YAGFastconst);
+	G4double YAGSlowconst = 100*ns;
+	YAGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", YAGSlowconst); //if slow component
+	YAGMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	YAGMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	YAG->SetMaterialPropertiesTable(YAGMPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
+
+
+	//#######################################################################################################################################
+	//#######################################################################################################################################
+
+	GAGG = new G4Material("GAGG",
+	6.6*g/cm3, //1.053
+	4,
+	kStateSolid,
+	273.15*kelvin,
+	1.0*atmosphere );
+
+	GAGGMPT = new G4MaterialPropertiesTable();
+
+	GAGG->AddElement( elementGd, 3);
+	GAGG->AddElement( elementGa, 3);
+	GAGG->AddElement( elementAl, 2);
+	GAGG->AddElement( elementO, 12);
+
+	// Read primary emission spectrum
+
+	std::ifstream ReadGAGG;
+
+	G4String GAGG_file = path+"GAGGCe_reverse.cfg";
+	std::vector<G4double> GAGG_Emission_Energy;
+	std::vector<G4double> GAGG_Emission_Ratio;
+
+	ReadGAGG.open(GAGG_file);
+	if(ReadGAGG.is_open()){
+		while(!ReadGAGG.eof()){
+			G4String filler;
+			ReadGAGG >> pWavelength >> filler >> ratio;
+			//G4cout << "Wavelength = " << 1240./pWavelength << " & emission = "<< ratio << G4endl;
+			GAGG_Emission_Energy.push_back((1240./pWavelength)*eV);         //convert wavelength to eV
+			GAGG_Emission_Ratio.push_back(ratio);
+		}
+	}
+	else
+	{
+		G4cout << "Error opening file: " << GAGG_file << G4endl;
+	}
+	ReadGAGG.close();
+
+	// // Read primary bulk absorption
+	Readabsorblength = path+"LuAGAbsorb_reverse.dat";
+	std::vector<G4double> GAGG_Absorption_Energy;
+	std::vector<G4double> GAGG_Absorption_Long;
+
+	Readabsorb.open(Readabsorblength);
+	if (Readabsorb.is_open()){
+		while(!Readabsorb.eof()){
+			G4String filler;
+			Readabsorb >> pWavelength >> filler >> varabsorblength;
+			//G4cout << "Wavelength = " << pWavelength << " & absorption = "<< varabsorblength << G4endl;
+			GAGG_Absorption_Energy.push_back((1240./pWavelength)*eV);
+			GAGG_Absorption_Long.push_back(645*mm);
+		}
+	}
+	else
+
+	G4cout << "Error opening file: "<< Readabsorblength << G4endl;
+
+	Readabsorb.close();
+
+	// Read scintillator refractive index
+	ref_index_emit = path+"PS_index_geant_reverse.cfg";
+	std::vector<G4double> GAGG_Index_Energy;
+	std::vector<G4double> GAGG_Index_Value;
+
+	Read_ref_index.open(ref_index_emit);
+	if(Read_ref_index.is_open()){
+		while(!Read_ref_index.eof()){
+			G4String filler;
+			Read_ref_index >> pWavelength >> filler >> indexvalue;
+			//ref_index_value[ref_index_Entries]=1.59;
+			GAGG_Index_Energy.push_back((1240/pWavelength)*eV);
+			//EJ260_Index_Value.push_back(indexvalue);
+			GAGG_Index_Value.push_back(1.91);
+		}
+	}
+	else
+	G4cout << "Error opening file: " << ref_index_emit << G4endl;
+	Read_ref_index.close();
+
+
+	// Now apply the properties table
+
+	GAGGMPT->AddProperty("RINDEX", GAGG_Index_Energy, GAGG_Index_Value);
+	GAGGMPT->AddProperty("ABSLENGTH", GAGG_Absorption_Energy, GAGG_Absorption_Long);    // the bulk absorption spectrum
+	GAGGMPT->AddProperty("SCINTILLATIONCOMPONENT1", GAGG_Emission_Energy, GAGG_Emission_Ratio);
+
+	GAGGMPT->AddConstProperty("SCINTILLATIONYIELD",lightyield/MeV);
+	//scintMPT->AddConstProperty("ALPHASCINTILLATIONYIELD",0.01*lightyield/MeV);
+	G4double GAGGRes = 1;
+	GAGGMPT->AddConstProperty("RESOLUTIONSCALE", GAGGRes);
+	G4double GAGGFastconst = 100*ns;
+	GAGGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1",GAGGFastconst);
+	G4double GAGGSlowconst = 100*ns;
+	GAGGMPT->AddConstProperty("SCINTILLATIONTIMECONSTANT2", GAGGSlowconst); //if slow component
+	GAGGMPT->AddConstProperty("SCINTILLATIONYIELD1",1.0);
+	GAGGMPT->AddConstProperty("SCINTILLATIONYIELD2",0.0);
+
+	GAGG->SetMaterialPropertiesTable(GAGGMPT);
+	//EJ262->GetIonisation()->SetBirksConstant(0.0872*mm/MeV); //0.126->base; 0.0872->article BiPO
 
 
 	//#######################################################################################################################################
@@ -1054,6 +1947,7 @@ void TPSimMaterials::Construct()
 
 	// Start of definition ZnS scintillation
 	ZnS = new G4Material("ZnS", 4.1*g/cm3, 2);
+	//ZnS = new G4Material("ZnS", 0.408*g/cm3, 2);
 	ZnS->AddElement(elementZn, 1);
 	ZnS->AddElement(elementS, 1);
 

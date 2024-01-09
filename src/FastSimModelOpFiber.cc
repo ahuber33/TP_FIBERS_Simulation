@@ -71,11 +71,18 @@ G4bool FastSimModelOpFiber::ModelTrigger(const G4FastTrack& fasttrack) {
 
     if(evtac->GetPhotonCreationAngle() >20.4 && evtac->GetPhotonCreationAngle() <159.6)
     {
-      attLength = 1.05*attLength; //ROUND SINGLE CLADDING
-      //attLength = 1.1*attLength; //ROUND MULTI CLADDING
+      //attLength = 1.05*attLength; //ROUND SINGLE CLADDING
+      attLength = 1.1*attLength; //ROUND MULTI CLADDING
       //attLength = 1.08*attLength; //SQUARE AIR INDEX = 1
       //attLength = 1.02*attLength; //SQUARE AIR INDEX = 1.49
       if(fSquareGeometry==true) return false;
+    }
+
+    if(evtac->GetPhotonCreationAngle() >27. && evtac->GetPhotonCreationAngle() <153)
+    {
+      //53 for square fiber && 51 for round fiber single cladding
+      //fKill = true;
+      //return true;
     }
 
 
@@ -107,6 +114,7 @@ G4bool FastSimModelOpFiber::ModelTrigger(const G4FastTrack& fasttrack) {
       //G4cout << "Track Length = 0" << G4endl;
       return true;
     }
+
 
     auto delta = track->GetMomentumDirection() * (fTrkLength-fTrkLengthBis);
     // G4cout << "Momentum Direction = " << track->GetMomentumDirection() << G4endl;
@@ -145,6 +153,9 @@ G4bool FastSimModelOpFiber::ModelTrigger(const G4FastTrack& fasttrack) {
       //53 for square fiber && 51 for round fiber single cladding
       return false;
     }
+
+
+
 
     evtac->SetTrackLengthFastSimulated((fTrkLength-fTrkLengthBis)*fNtransport);
     double nInteractionLength = (fTrkLength-fTrkLengthBis)*fNtransport/attLength;

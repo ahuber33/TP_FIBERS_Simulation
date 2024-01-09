@@ -49,7 +49,7 @@
 #- Abandon de la méthode de génération du bunch de fibres avec l'outil G4VPVParameterisation de GEANT4. En effet, celui-ci introduit un dysfonctionnement dans le suivi des photons optiques dans la chambre du à une erreur lors de la prise en compte de la normale à la surface de la fibre. Celle-ci est inversée ce qui fait qu'un photon étant à la base piégé dans la fibre peut se retrouver en dehors de celle-ci...
 #- Remplacement de la méthode précédente par une boucle for permettant de générer l'ensemble des fibres à partir du nombre indiqué dans le fichier de config.
 #- Nécessaire de changer la génération des volumes solides dans le fichier Geometry.cc. Précédemment, les volumes circulaires des fibres étaient plein afin de pouvoir être le holder du volume ayant un diamètre plus petit. Doréanavant, vu que chaque élément est distinct de l'autre et défini dans le FibersHolder, il est nécessaire de créer les vraies volumes (donc sous la forme d'anneau).
-# - Création de tableaux de G4VPhysicalVolume pour prendre en compte l'ensemble des modifications précédentes et afficher le bunch de fibres. Méthode OK !!!
+#- Création de tableaux de G4VPhysicalVolume pour prendre en compte l'ensemble des modifications précédentes et afficher le bunch de fibres. Méthode OK !!!
 #- Passage de l'efficacité quantique du détecteur à 1 afin que les photons détectés correspondent aux photons transmis jusqu'au détecteur (plus facile pour les études préliminaires).
 #- Ajout d'un paramètre dans l'outil G4FAST permettant de calculer la longueur de la trace à partir du moment où elle effectue a première réflexion totale et non pas de puis sa création.
 #- Ajout d'un paramètre dans l'outil G4FAST permettant d'effectuer certaines opérations ou non si la géométrie des fibres est circulaire ou carrée (exemple du suivi des photons à grand angle dans la géométrie carrée où le module G4FAST est désactivée).
@@ -81,3 +81,7 @@
 
 # Commit #1 avec VERSION INITIAL DU CODE PROVENANT DE LA VERSION TPSim.0.8.1 [TPFIBERSSim.0.0.0]
 # Les informations concernant principalement la fibre sont référencés au début de ce README. Si besoin d'informations supplémentaires, se reporter au README de TP_simulation !!!!
+
+# Commit #2 [TPFIBERSSim.0.1.0] le 09/01/2024
+# - Passage du code sur la version 11.2.0 de GEANT4
+# - Passage de Atom vers Visual Code Studio avec notamment création d'une branche save permettant de push les changements d'une journée avant demerge sur la branche principale

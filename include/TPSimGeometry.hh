@@ -82,6 +82,7 @@ private:
   G4LogicalVolume *LogicalOuterCladdingFiber;
   G4LogicalVolume *LogicalFiber;
   G4LogicalVolume *LogicalLens;
+  G4LogicalVolume *LogicalLens2;
 
 
   // Physical volumes
@@ -111,6 +112,7 @@ private:
   G4VPhysicalVolume *PhysicalInnerCladdingFiberBunch[1000000];
   G4VPhysicalVolume *PhysicalOuterCladdingFiberBunch[1000000];
   G4VPhysicalVolume *PhysicalLens;
+  G4VPhysicalVolume *PhysicalLens2;
 
 
   // Optical surfaces
@@ -169,7 +171,8 @@ private:
   G4double FiberWidthCladding;
   G4double FiberMultiCladding;
   G4double FiberGeometry;
-  G4double WidthBunchFibers;
+  G4double WidthXBunchFibers;
+  G4double WidthYBunchFibers;
   G4int ActivationG4FAST;
 
   // Dimensions PLACEMENTS

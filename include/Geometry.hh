@@ -52,6 +52,7 @@ public:
   G4LogicalVolume *GetZnS();
   G4LogicalVolume *GetZnSLG();
   G4LogicalVolume *GetPhotocathode();
+  G4LogicalVolume *GetRoundPhotocathode();
   G4LogicalVolume *GetLens();
 
 
