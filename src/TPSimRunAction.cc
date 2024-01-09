@@ -58,22 +58,22 @@ void TPSimRunAction::BeginOfRunAction(const G4Run* aRun){
   RunBranch = Tree_Optical->Branch("DetectorPositionX", "vector<float>", &StatsOptical.DetectorPositionX);
   RunBranch = Tree_Optical->Branch("DetectorPositionY", "vector<float>", &StatsOptical.DetectorPositionY);
   //RunBranch = Tree_Optical->Branch("PositionZ", "vector<float>", &StatsOptical.PositionZ);
-  // RunBranch = Tree_Optical->Branch("PhotonTrajectoryX", "vector<float>", &StatsOptical.PhotonTrajectoryX);
+   //RunBranch = Tree_Optical->Branch("PhotonTrajectoryX", "vector<float>", &StatsOptical.PhotonTrajectoryX);
   // RunBranch = Tree_Optical->Branch("PhotonTrajectoryY", "vector<float>", &StatsOptical.PhotonTrajectoryY);
   // RunBranch = Tree_Optical->Branch("PhotonTrajectoryZ", "vector<float>", &StatsOptical.PhotonTrajectoryZ);
   // RunBranch = Tree_Optical->Branch("PhotonTrajectoryNStep", "vector<int>", &StatsOptical.PhotonTrajectoryNStep);
-  // RunBranch = Tree_Optical->Branch("MomentumX", "vector<float>", &StatsOptical.MomentumX);
-  // RunBranch = Tree_Optical->Branch("MomentumY", "vector<float>", &StatsOptical.MomentumY);
-  // RunBranch = Tree_Optical->Branch("MomentumZ", "vector<float>", &StatsOptical.MomentumZ);
+  RunBranch = Tree_Optical->Branch("MomentumX", "vector<float>", &StatsOptical.MomentumX);
+  RunBranch = Tree_Optical->Branch("MomentumY", "vector<float>", &StatsOptical.MomentumY);
+  RunBranch = Tree_Optical->Branch("MomentumZ", "vector<float>", &StatsOptical.MomentumZ);
   //RunBranch = Tree_Optical->Branch("BirthLambda", "vector<float>", &StatsOptical.BirthLambda);
-  //RunBranch = Tree_Optical->Branch("Time", "vector<float>", &StatsOptical.Time);
+  RunBranch = Tree_Optical->Branch("Time", "vector<float>", &StatsOptical.Time);
   //RunBranch = Tree_Optical->Branch("Energy_pe", "vector<float>", &StatsOptical.Energy_pe);
   // RunBranch = Tree_Optical->Branch("Rayleigh", "vector<float>", &StatsOptical.Rayleigh);
   // RunBranch = Tree_Optical->Branch("Total_Reflections", "vector<float>", &StatsOptical.Total_Reflections);
   // RunBranch = Tree_Optical->Branch("Wrap_Reflections", "vector<float>", &StatsOptical.Wrap_Reflections);
   //RunBranch = Tree_Optical->Branch("TotalLength", "vector<float>", &StatsOptical.TotalLength);
-  //RunBranch = Tree_Optical->Branch("Angle_creation", "vector<float>", &StatsOptical.Angle_creation);
-  //RunBranch = Tree_Optical->Branch("Angle_detection", "vector<float>", &StatsOptical.Angle_detection);
+  RunBranch = Tree_Optical->Branch("Angle_creation", "vector<float>", &StatsOptical.Angle_creation);
+  RunBranch = Tree_Optical->Branch("Angle_detection", "vector<float>", &StatsOptical.Angle_detection);
   //RunBranch = Tree_Optical->Branch("Final_state_photon", "vector<int>", &StatsOptical.FinalState);
 
 
@@ -84,7 +84,7 @@ void TPSimRunAction::BeginOfRunAction(const G4Run* aRun){
   //RunBranch = Tree_TP->Branch("Charge", &StatsTP.Charge, "Charge/F" );
   RunBranch = Tree_TP->Branch("PositionX", &StatsTP.PositionX, "PositionX/F" );
   RunBranch = Tree_TP->Branch("PositionY", &StatsTP.PositionY, "PositionY/F" );
-  //RunBranch = Tree_TP->Branch("PositionZ", &StatsTP.PositionZ, "PositionZ/F" );
+  RunBranch = Tree_TP->Branch("PositionZ", &StatsTP.PositionZ, "PositionZ/F" );
   //RunBranch = Tree_TP->Branch("Time", &StatsTP.Time, "Time/F" );
   //RunBranch = Tree_TP->Branch("TotalLength", &StatsTP.TotalLength, "TotalLength/F" );
   //RunBranch = Tree_TP->Branch("InteractionDepth", &StatsTP.InteractionDepth, "InteractionDepth/F" );

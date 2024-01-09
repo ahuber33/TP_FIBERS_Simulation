@@ -57,6 +57,12 @@ private:
   G4Element* elementLa;
   G4Element* elementBr;
   G4Element* elementS;
+  G4Element* elementLu;
+  G4Element* elementY;
+  G4Element* elementCs;
+  G4Element* elementI;
+  G4Element* elementGd;
+  G4Element* elementGa;
 
   G4Material *SiO2;
   G4Material *Silicium;
@@ -94,12 +100,22 @@ private:
   G4Material *grease;
   G4Material *cargille;
   G4Material *PMMA;
+  G4Material *PS;
   G4Material *FP;
   G4Material *Alu;
   G4Material *RTV;
   G4Material *ZnS;
   G4Material *NoWaSH;
   G4Material *lens_glass;
+  G4Material *EJ214;
+  G4Material *EJ212;
+  G4Material *EJ260;
+  G4Material *EJ262;
+  G4Material *LYSO;
+  G4Material *CsITl;
+  G4Material *LuAG;
+  G4Material *GAGG;
+  G4Material *YAG;
 
   G4MaterialPropertiesTable *bs_glassMPT;
   G4MaterialPropertiesTable *vacMPT;
@@ -110,10 +126,20 @@ private:
   G4MaterialPropertiesTable *cargilleMPT;
   G4MaterialPropertiesTable *LaBr3MPT;
   G4MaterialPropertiesTable *PMMAMPT;
+  G4MaterialPropertiesTable *PSMPT;
   G4MaterialPropertiesTable *FPMPT;
   G4MaterialPropertiesTable *ZnSMPT;
   G4MaterialPropertiesTable *NoWaSHMPT;
   G4MaterialPropertiesTable *lens_glassMPT;
+  G4MaterialPropertiesTable *EJ212MPT;
+  G4MaterialPropertiesTable *EJ214MPT;
+  G4MaterialPropertiesTable *EJ260MPT;
+  G4MaterialPropertiesTable *EJ262MPT;
+  G4MaterialPropertiesTable *LYSOMPT;
+  G4MaterialPropertiesTable *CsITlMPT;
+  G4MaterialPropertiesTable *LuAGMPT;
+  G4MaterialPropertiesTable *YAGMPT;
+  G4MaterialPropertiesTable *GAGGMPT;
 
   G4OpticalSurface* PMMAOpSurface;
 

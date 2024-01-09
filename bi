@@ -4,9 +4,9 @@ AirGapTeflon 0.05 mm
 MylarThickness 0.012 mm
 AirGapMylar 0.1 mm
 GlueThickness 0.3 mm
-ScintillatorLength 60 mm
-ScintillatorThickness 0.1 mm
-ZnSThickness 0. mm
+ScintillatorLength 120 mm
+ScintillatorThickness 5 mm
+ZnSThickness 0.0 mm
 ZnSLGThickness 0. mm
 DetectorLength 13.312 mm
 DetectorWidth 13.312 mm
@@ -43,10 +43,10 @@ translation_pinhole 15.4 mm
 #Fibers
 Fiber_geometry 0 #0=round & 1=square
 Fiber_multi_cladding 1 #0 or 1 to activate
-Fiber_number_per_line 250 #250
+Fiber_number_per_line 500
 Fiber_space 0.01 mm
 Fiber_width 0.2 mm
 Fiber_cladding_ratio 0.02
-Fiber_length 1. m
+Fiber_length 1 m
 #ACTIVATION G4FastTrack
 G4FAST 1
